@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cultura · Fundación Bio-Bío Impulsa</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root { --azul: #1565C0; --rojo: #C62828; --blanco: #ffffff; --gris: #f5f7fa; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Open Sans', sans-serif; color: #1a1a2e; }
+
+    /* NAV */
+    .navbar { background: var(--blanco) !important; box-shadow: 0 2px 16px rgba(21,101,192,0.10); padding: 0.5rem 1.5rem; position: sticky; top: 0; z-index: 1000; }
+    .navbar-brand span { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1.1rem; color: var(--azul); line-height: 1.2; margin-left: 10px; }
+    .navbar-nav .nav-link { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.95rem; color: var(--azul) !important; display: flex; align-items: center; gap: 6px; padding: 0.5rem 1rem !important; border-radius: 8px; transition: transform 0.22s cubic-bezier(.34,1.56,.64,1), color 0.18s, background 0.18s; }
+    .navbar-nav .nav-link svg { width: 18px; height: 18px; fill: var(--azul); transition: fill 0.18s; }
+    .navbar-nav .nav-link:hover { transform: scale(1.12); color: var(--rojo) !important; background: rgba(198,40,40,0.06); }
+    .navbar-nav .nav-link:hover svg { fill: var(--rojo); }
+    .navbar-toggler { border-color: var(--azul); }
+    .navbar-toggler-icon { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%231565C0' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
+
+    /* HERO - gradiente azul+rojo */
+    .page-hero { 
+      min-height: 100vh;
+      background: linear-gradient(120deg, rgb(196, 194, 194) 0%, rgba(245, 236, 236, 0.55) 100%),
+        url('static/fondo_head.jpg') center center / cover no-repeat;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before { content: ''; position: absolute; width: 500px; height: 500px; border-radius: 50%; background: rgba(255,255,255,0.04); top: -150px; right: -100px; }
+    .page-hero::after { content: ''; position: absolute; width: 300px; height: 300px; border-radius: 50%; background: rgba(255,255,255,0.05); bottom: -80px; left: -60px; }
+    .page-hero h1 { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: clamp(2.2rem,5vw,3.8rem); position: relative; z-index: 1; }
+    .page-hero p { font-size: 1.1rem; opacity: 0.88; max-width: 600px; line-height: 1.7; position: relative; z-index: 1; }
+    .hero-badge-inner { display: inline-block; background: rgba(255,255,255,0.15); border: 1.5px solid rgba(255,255,255,0.35); color: #fff; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.78rem; letter-spacing: 2.5px; text-transform: uppercase; padding: 5px 16px; border-radius: 50px; margin-bottom: 1.2rem; position: relative; z-index: 1; }
+
+    /* STATS */
+    .stats-bar { background: #fff; box-shadow: 0 4px 24px rgba(21,101,192,0.10); border-radius: 16px; margin-top: -2.5rem; position: relative; z-index: 10; padding: 2rem; }
+    .stat-num { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 2.2rem; background: linear-gradient(135deg, var(--azul), var(--rojo)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .stat-label { font-size: 0.85rem; color: #666; font-family: 'Montserrat', sans-serif; font-weight: 600; }
+    .stat-divider { border-left: 1.5px solid #e2e8f0; }
+
+    /* SECTION */
+    .sec-title { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: clamp(1.7rem,3.5vw,2.5rem); }
+    .sec-sub { color: #666; font-size: 1rem; line-height: 1.65; }
+    .sec-line { width: 52px; height: 4px; border-radius: 2px; margin-bottom: 1rem; }
+
+    /* EXPRESIONES */
+    .expr-card { border-radius: 20px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform 0.28s cubic-bezier(.34,1.56,.64,1), box-shadow 0.2s; position: relative; }
+    .expr-card:hover { transform: translateY(-8px); box-shadow: 0 18px 44px rgba(0,0,0,0.14); }
+    .expr-icon { padding: 2.5rem 2rem; display: flex; align-items: center; justify-content: center; min-height: 160px; position: relative; overflow: hidden; }
+    .expr-icon svg { width: 80px; height: 80px; position: relative; z-index: 2; }
+    .expr-icon::before { content: ''; position: absolute; width: 200px; height: 200px; border-radius: 50%; background: rgba(255,255,255,0.08); top: -60px; right: -60px; }
+    .expr-body { padding: 1.6rem; background: #fff; }
+    .expr-body h5 { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.1rem; margin-bottom: 0.6rem; }
+    .expr-body p { font-size: 0.92rem; line-height: 1.65; color: #555; }
+    .expr-tag { display: inline-block; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.72rem; letter-spacing: 1.5px; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; margin-bottom: 0.8rem; }
+
+    /* EVENTOS */
+    .evento-card { display: flex; gap: 1.2rem; align-items: flex-start; padding: 1.4rem; border-radius: 16px; background: #fff; box-shadow: 0 2px 16px rgba(0,0,0,0.06); transition: transform 0.2s, box-shadow 0.2s; margin-bottom: 1rem; }
+    .evento-card:hover { transform: translateX(6px); box-shadow: 0 6px 24px rgba(21,101,192,0.12); }
+    .evento-fecha { min-width: 60px; text-align: center; padding: 0.5rem; border-radius: 12px; background: linear-gradient(135deg, var(--azul) 0%, var(--rojo) 100%); color: #fff; }
+    .evento-dia { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1.6rem; line-height: 1; }
+    .evento-mes { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.72rem; text-transform: uppercase; opacity: 0.85; }
+    .evento-info h6 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.98rem; color: var(--azul); margin-bottom: 0.3rem; }
+    .evento-info p { font-size: 0.88rem; color: #777; line-height: 1.5; }
+    .evento-badge { display: inline-block; font-size: 0.72rem; font-family: 'Montserrat', sans-serif; font-weight: 700; padding: 2px 8px; border-radius: 20px; }
+
+    /* MAPUCHE SECTION */
+    .mapuche-section { background: linear-gradient(135deg, #0d2137 0%, var(--azul) 100%); color: #fff; padding: 5rem 2rem; position: relative; overflow: hidden; }
+    .mapuche-section::before { content: ''; position: absolute; width: 400px; height: 400px; border-radius: 50%; background: rgba(198,40,40,0.12); top: -100px; right: -80px; }
+    .mapuche-section::after { content: ''; position: absolute; width: 250px; height: 250px; border-radius: 50%; background: rgba(255,255,255,0.04); bottom: -60px; left: -40px; }
+
+    /* CTA */
+    .cta-band { background: linear-gradient(135deg, var(--azul) 0%, var(--rojo) 100%); color: #fff; padding: 4rem 2rem; text-align: center; }
+    .cta-band h2 { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: clamp(1.6rem,3.5vw,2.4rem); margin-bottom: 0.8rem; }
+    .cta-band p { opacity: 0.88; max-width: 500px; margin: 0 auto 1.8rem; line-height: 1.7; }
+    .btn-cta-white { display: inline-flex; align-items: center; gap: 8px; background: #fff; color: var(--azul); font-family: 'Montserrat', sans-serif; font-weight: 700; padding: 13px 30px; border-radius: 50px; text-decoration: none; transition: transform 0.2s, background 0.2s, color 0.2s; }
+    .btn-cta-white:hover { background: rgba(255,255,255,0.15); color: #fff; border: 2px solid rgba(255,255,255,0.5); transform: translateY(-3px) scale(1.05); }
+
+    /* FOOTER */
+    footer { background: var(--azul); color: rgba(255,255,255,0.9); padding: 3rem 2rem 1.5rem; }
+    .footer-brand { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1.2rem; color: #fff; margin-bottom: 0.4rem; }
+    .footer-links a { display: block; color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem; margin-bottom: 0.4rem; transition: color 0.18s; }
+    .footer-links a:hover { color: #fff; }
+    .footer-links-title { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.82rem; letter-spacing: 2px; text-transform: uppercase; color: #fff; margin-bottom: 0.8rem; }
+    .footer-divider { border-color: rgba(255,255,255,0.18); margin: 2rem 0 1rem; }
+    .footer-copy { font-size: 0.8rem; color: rgba(255,255,255,0.45); text-align: center; }
+
+    .fade-in-up { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in-up.visible { opacity: 1; transform: translateY(0); }
+    @media (max-width: 767px) { .stat-divider { border-left: none; border-top: 1.5px solid #e2e8f0; } }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 100 100">
+        <ellipse cx="38" cy="72" rx="22" ry="26" fill="#1565C0"/>
+        <rect x="20" y="30" width="10" height="42" rx="5" fill="#1565C0"/>
+        <rect x="30" y="22" width="10" height="50" rx="5" fill="#1565C0"/>
+        <rect x="40" y="24" width="10" height="48" rx="5" fill="#1565C0"/>
+        <rect x="50" y="30" width="9" height="42" rx="4.5" fill="#1565C0"/>
+        <ellipse cx="62" cy="72" rx="22" ry="26" fill="#C62828"/>
+        <rect x="45" y="30" width="10" height="42" rx="5" fill="#C62828"/>
+        <rect x="55" y="22" width="10" height="50" rx="5" fill="#C62828"/>
+        <rect x="65" y="24" width="10" height="48" rx="5" fill="#C62828"/>
+        <rect x="75" y="30" width="9" height="42" rx="4.5" fill="#C62828"/>
+        <ellipse cx="50" cy="76" rx="13" ry="16" fill="#fff"/>
+        <rect x="41" y="50" width="7" height="26" rx="3.5" fill="#fff"/>
+        <rect x="48" y="44" width="7" height="32" rx="3.5" fill="#fff"/>
+        <rect x="55" y="46" width="6" height="30" rx="3" fill="#fff"/>
+      </svg>
+      <span>Fundación<br/>Bio-Bío Impulsa</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav gap-1">
+        <li class="nav-item"><a class="nav-link" href="index.html"><svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="educacion.html"><svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>Educación</a></li>
+        <li class="nav-item"><a class="nav-link" href="salud.html"><svg viewBox="0 0 24 24"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>Salud</a></li>
+        <li class="nav-item"><a class="nav-link" href="cultura.html"><svg viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm0 16c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7zm-1.5-9.5l5 3-5 3v-6z"/></svg>Cultura</a></li>
+        <li class="nav-item"><a class="nav-link" href="cultura_2.html"><svg viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm0 16c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7zm-1.5-9.5l5 3-5 3v-6z"/></svg>Cultura 2</a></li>
+      </ul>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="hero-badge-inner">Pilar Cultural</div>
+    <h1 class="mb-3">Impulsamos<br/>Cultura</h1>
+    <p>La cultura es el alma de nuestra País, por eso promovemos las bellas arte, el patrimonio historico y las expresiones creativas que fortalecen la identidad de nuestra Nación.</p>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="container" style="position:relative;z-index:10;">
+  <div class="stats-bar">
+    <div class="row g-3 text-center">
+      <div class="col-6 col-md-3 text-center">
+        <div class="stat-num">24</div>
+        <div class="stat-label">Festivales realizados</div>
+      </div>
+      <div class="col-6 col-md-3 text-center stat-divider">
+        <div class="stat-num">5.000+</div>
+        <div class="stat-label">Participantes anuales</div>
+      </div>
+      <div class="col-6 col-md-3 text-center stat-divider">
+        <div class="stat-num">80+</div>
+        <div class="stat-label">Artistas apoyados</div>
+      </div>
+      <div class="col-6 col-md-3 text-center stat-divider">
+        <div class="stat-num">18</div>
+        <div class="stat-label">Talleres activos</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- EXPRESIONES CULTURALES -->
+<section style="padding: 5rem 0; background: var(--gris);">
+  <div class="container">
+    <div class="text-center mb-5 fade-in-up">
+      <div class="sec-line mx-auto" style="background:linear-gradient(90deg,var(--azul),var(--rojo));"></div>
+      <h2 class="sec-title" style="background:linear-gradient(135deg,var(--azul),var(--rojo));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Expresiones que apoyamos</h2>
+      <p class="sec-sub mx-auto mt-2">Desde las artes visuales hasta la música ancestral, abrimos espacios para todas las formas de expresión cultural de nuestra región.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-4 fade-in-up">
+        <div class="expr-card h-100">
+          <div class="expr-icon" style="background:linear-gradient(135deg,var(--azul) 0%,#0d47a1 100%);">
+            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="28" cy="60" r="12" fill="#fff" opacity="0.7"/>
+              <circle cx="60" cy="52" r="12" fill="#fff" opacity="0.5"/>
+              <rect x="38" y="20" width="5" height="40" rx="2.5" fill="#fff" opacity="0.8"/>
+              <rect x="68" y="12" width="5" height="40" rx="2.5" fill="#fff" opacity="0.6"/>
+              <path d="M43 20 Q72 12 73 12" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+              <path d="M43 29 Q72 21 73 21" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.5"/>
+            </svg>
+          </div>
+          <div class="expr-body">
+            <div class="expr-tag" style="background:rgba(21,101,192,0.1);color:var(--azul);">Música</div>
+            <h5 style="color:var(--azul);">Música y Danza</h5>
+            <p>Talleres de guitarra, cueca, baile folclórico, percusión y canto coral para niños, jóvenes y adultos en todo el Biobío.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 fade-in-up">
+        <div class="expr-card h-100">
+          <div class="expr-icon" style="background:linear-gradient(135deg,var(--rojo) 0%,#7b1515 100%);">
+            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+              <rect x="12" y="12" width="56" height="46" rx="6" fill="rgba(255,255,255,0.2)"/>
+              <path d="M20 20 L38 20 L28 38 Z" fill="#fff" opacity="0.6"/>
+              <circle cx="52" cy="28" r="10" fill="#fff" opacity="0.5"/>
+              <path d="M15 50 Q30 35 45 45 Q60 55 65 42" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.7"/>
+              <rect x="18" y="56" width="44" height="4" rx="2" fill="rgba(255,255,255,0.3)"/>
+            </svg>
+          </div>
+          <div class="expr-body">
+            <div class="expr-tag" style="background:rgba(198,40,40,0.1);color:var(--rojo);">Artes Visuales</div>
+            <h5 style="color:var(--rojo);">Pintura y Muralismo</h5>
+            <p>Gestión de murales comunitarios, exposiciones de arte local y talleres de pintura que dan voz a artistas emergentes de la región.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 fade-in-up">
+        <div class="expr-card h-100">
+          <div class="expr-icon" style="background:linear-gradient(135deg,#0d47a1 0%,var(--rojo) 100%);">
+            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="24" width="60" height="38" rx="8" fill="rgba(255,255,255,0.2)"/>
+              <polygon points="40,8 72,24 8,24" fill="rgba(255,255,255,0.25)"/>
+              <line x1="22" y1="38" x2="22" y2="62" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+              <line x1="40" y1="38" x2="40" y2="62" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+              <line x1="58" y1="38" x2="58" y2="62" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+            </svg>
+          </div>
+          <div class="expr-body">
+            <div class="expr-tag" style="background:rgba(21,101,192,0.1);color:var(--azul);">Teatro</div>
+            <h5 style="color:var(--azul);">Teatro y Artes Escénicas</h5>
+            <p>Compañías de teatro comunitario, títeres, impro y expresión corporal que llevan el arte escénico a plazas, colegios y centros sociales.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 fade-in-up">
+        <div class="expr-card h-100">
+          <div class="expr-icon" style="background:linear-gradient(135deg,var(--rojo) 0%,var(--azul) 100%);">
+            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+              <path d="M40 12 L52 36 L76 36 L56 52 L64 76 L40 60 L16 76 L24 52 L4 36 L28 36 Z" fill="rgba(255,255,255,0.25)"/>
+              <path d="M40 22 L48 40 L66 40 L52 50 L58 68 L40 56 L22 68 L28 50 L14 40 L32 40 Z" fill="#fff" opacity="0.5"/>
+            </svg>
+          </div>
+          <div class="expr-body">
+            <div class="expr-tag" style="background:rgba(198,40,40,0.1);color:var(--rojo);">Patrimonio</div>
+            <h5 style="color:var(--rojo);">Patrimonio Mapuche</h5>
+            <p>Rescate y difusión de la cultura mapuche-pewenche a través de talleres de mapudungún, artesanía en plata, telar y cosmovisión ancestral.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 fade-in-up">
+        <div class="expr-card h-100">
+          <div class="expr-icon" style="background:linear-gradient(135deg,#1565C0 0%,#0d47a1 100%);">
+            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="18" width="34" height="46" rx="5" fill="rgba(255,255,255,0.25)"/>
+              <rect x="36" y="18" width="34" height="46" rx="5" fill="rgba(255,255,255,0.15)"/>
+              <rect x="16" y="26" width="22" height="3" rx="1.5" fill="#fff" opacity="0.7"/>
+              <rect x="16" y="33" width="18" height="3" rx="1.5" fill="#fff" opacity="0.5"/>
+              <rect x="16" y="40" width="22" height="3" rx="1.5" fill="#fff" opacity="0.5"/>
+              <rect x="16" y="47" width="15" height="3" rx="1.5" fill="#fff" opacity="0.4"/>
+            </svg>
+          </div>
+          <div class="expr-body">
+            <div class="expr-tag" style="background:rgba(21,101,192,0.1);color:var(--azul);">Literatura</div>
+            <h5 style="color:var(--azul);">Literatura y Escritura Creativa</h5>
+            <p>Clubes de lectura, talleres de escritura y publicaciones comunitarias que promueven la voz literaria de autores locales del Biobío.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 fade-in-up">
+        <div class="expr-card h-100">
+          <div class="expr-icon" style="background:linear-gradient(135deg,#7b1515 0%,var(--rojo) 100%);">
+            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="40" cy="40" r="26" fill="rgba(255,255,255,0.15)"/>
+              <circle cx="40" cy="40" r="18" fill="rgba(255,255,255,0.15)"/>
+              <line x1="40" y1="14" x2="40" y2="66" stroke="#fff" stroke-width="2" opacity="0.4"/>
+              <line x1="14" y1="40" x2="66" y2="40" stroke="#fff" stroke-width="2" opacity="0.4"/>
+              <line x1="22" y1="22" x2="58" y2="58" stroke="#fff" stroke-width="2" opacity="0.3"/>
+              <line x1="58" y1="22" x2="22" y2="58" stroke="#fff" stroke-width="2" opacity="0.3"/>
+              <circle cx="40" cy="40" r="7" fill="#fff" opacity="0.7"/>
+            </svg>
+          </div>
+          <div class="expr-body">
+            <div class="expr-tag" style="background:rgba(198,40,40,0.1);color:var(--rojo);">Audiovisual</div>
+            <h5 style="color:var(--rojo);">Cine y Fotografía</h5>
+            <p>Festivales de cortometrajes, talleres de fotografía documental y cine comunitario que registran la memoria viva de la región.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRÓXIMOS EVENTOS -->
+<section style="padding: 5rem 0; background: #fff;">
+  <div class="container">
+    <div class="row g-5 align-items-start">
+      <div class="col-lg-5 fade-in-up">
+        <div class="sec-line" style="background:linear-gradient(90deg,var(--azul),var(--rojo));"></div>
+        <h2 class="sec-title" style="color:var(--azul);">Próximos Eventos</h2>
+        <p class="sec-sub mt-2 mb-4">Actividades culturales abiertas a toda la comunidad del Biobío. Entrada libre y gratuita.</p>
+        <div style="background:linear-gradient(135deg,var(--azul) 0%,var(--rojo) 100%);border-radius:16px;padding:2rem;color:#fff;text-align:center;">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="rgba(255,255,255,0.8)" style="margin-bottom:0.8rem;"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
+          <div style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:1.3rem;">Agenda 2025</div>
+          <div style="opacity:0.88;font-size:0.9rem;margin-top:0.4rem;">+ de 40 actividades programadas este año en toda la región</div>
+        </div>
+      </div>
+      <div class="col-lg-7 fade-in-up">
+        <div class="evento-card">
+          <div class="evento-fecha"><div class="evento-dia">14</div><div class="evento-mes">Jun</div></div>
+          <div class="evento-info">
+            <div class="evento-badge" style="background:rgba(21,101,192,0.1);color:var(--azul);margin-bottom:0.4rem;">Música</div>
+            <h6>Festival Folclórico del Biobío</h6>
+            <p>Plaza de Armas de Concepción · Entrada liberada · 10:00 a 20:00 hrs</p>
+          </div>
+        </div>
+        <div class="evento-card">
+          <div class="evento-fecha" style="background:linear-gradient(135deg,var(--rojo) 0%,#7b1515 100%);"><div class="evento-dia">28</div><div class="evento-mes">Jun</div></div>
+          <div class="evento-info">
+            <div class="evento-badge" style="background:rgba(198,40,40,0.1);color:var(--rojo);margin-bottom:0.4rem;">Patrimonio</div>
+            <h6>Encuentro de Culturas: We Tripantu</h6>
+            <p>Parque Bicentenario, Concepción · Celebración del Año Nuevo Mapuche</p>
+          </div>
+        </div>
+        <div class="evento-card">
+          <div class="evento-fecha"><div class="evento-dia">12</div><div class="evento-mes">Jul</div></div>
+          <div class="evento-info">
+            <div class="evento-badge" style="background:rgba(21,101,192,0.1);color:var(--azul);margin-bottom:0.4rem;">Teatro</div>
+            <h6>Muestra Regional de Teatro Comunitario</h6>
+            <p>Teatro Municipal de Los Ángeles · 4 compañías locales · Gratis</p>
+          </div>
+        </div>
+        <div class="evento-card">
+          <div class="evento-fecha" style="background:linear-gradient(135deg,#0d47a1 0%,var(--rojo) 100%);"><div class="evento-dia">02</div><div class="evento-mes">Ago</div></div>
+          <div class="evento-info">
+            <div class="evento-badge" style="background:rgba(198,40,40,0.1);color:var(--rojo);margin-bottom:0.4rem;">Audiovisual</div>
+            <h6>Festival de Cortometrajes del Biobío</h6>
+            <p>Centro Cultural Estación Concepción · Proyecciones gratuitas al aire libre</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PATRIMONIO MAPUCHE -->
+<section class="mapuche-section">
+  <div class="container" style="position:relative;z-index:2;">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5 text-center fade-in-up">
+        <svg viewBox="0 0 200 200" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+          <!-- Kultrún (tambor mapuche) -->
+          <circle cx="100" cy="100" r="88" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="2.5"/>
+          <circle cx="100" cy="100" r="75" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+          <!-- Cruz cuádruple -->
+          <line x1="100" y1="25" x2="100" y2="175" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+          <line x1="25" y1="100" x2="175" y2="100" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+          <line x1="47" y1="47" x2="153" y2="153" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+          <line x1="153" y1="47" x2="47" y2="153" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+          <!-- Sol (Antü) -->
+          <circle cx="100" cy="100" r="22" fill="rgba(255,255,255,0.15)" stroke="#fff" stroke-width="2.5"/>
+          <!-- Lunas (Küyen) -->
+          <path d="M100 28 Q114 40 100 52 Q86 40 100 28" fill="rgba(255,255,255,0.4)"/>
+          <path d="M100 148 Q114 160 100 172 Q86 160 100 148" fill="rgba(198,40,40,0.5)"/>
+          <path d="M28 100 Q40 86 52 100 Q40 114 28 100" fill="rgba(255,255,255,0.4)"/>
+          <path d="M148 100 Q160 86 172 100 Q160 114 148 100" fill="rgba(198,40,40,0.5)"/>
+          <!-- Estrellas -->
+          <circle cx="65" cy="65" r="5" fill="rgba(255,255,255,0.6)"/>
+          <circle cx="135" cy="65" r="5" fill="rgba(198,40,40,0.7)"/>
+          <circle cx="65" cy="135" r="5" fill="rgba(198,40,40,0.7)"/>
+          <circle cx="135" cy="135" r="5" fill="rgba(255,255,255,0.6)"/>
+        </svg>
+      </div>
+      <div class="col-lg-7 fade-in-up">
+        <div style="display:inline-block;background:rgba(255,255,255,0.12);border:1.5px solid rgba(255,255,255,0.3);color:#fff;font-family:'Montserrat',sans-serif;font-weight:700;font-size:0.78rem;letter-spacing:2.5px;text-transform:uppercase;padding:5px 16px;border-radius:50px;margin-bottom:1.2rem;">Patrimonio vivo</div>
+        <h2 style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(1.8rem,4vw,2.8rem);margin-bottom:1rem;">Cultura Mapuche-Pewenche</h2>
+        <p style="font-size:1.02rem;opacity:0.88;line-height:1.75;margin-bottom:1.5rem;">
+          La Región del Biobío es territorio ancestral mapuche y pewenche. Trabajamos junto a comunidades y lonkos para preservar y difundir su lengua, ceremonias, medicinal tradicional y cosmovisión. El kultrún —instrumento sagrado— representa el universo mapuche: su círculo divide el mundo en cuatro partes que debemos cuidar juntos.
+        </p>
+        <div class="row g-3">
+          <div class="col-sm-6">
+            <div style="background:rgba(255,255,255,0.1);border-radius:12px;padding:1rem 1.2rem;">
+              <div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:0.82rem;letter-spacing:1.5px;text-transform:uppercase;opacity:0.7;margin-bottom:0.3rem;">Idioma</div>
+              <div style="font-size:0.95rem;">Talleres de Mapudungún para niños y adultos</div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div style="background:rgba(255,255,255,0.1);border-radius:12px;padding:1rem 1.2rem;">
+              <div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:0.82rem;letter-spacing:1.5px;text-transform:uppercase;opacity:0.7;margin-bottom:0.3rem;">Artesanía</div>
+              <div style="font-size:0.95rem;">Telar, platería y alfarería tradicional mapuche</div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div style="background:rgba(255,255,255,0.1);border-radius:12px;padding:1rem 1.2rem;">
+              <div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:0.82rem;letter-spacing:1.5px;text-transform:uppercase;opacity:0.7;margin-bottom:0.3rem;">Ceremonias</div>
+              <div style="font-size:0.95rem;">We Tripantu, Nguillatún y rituales de la tierra</div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div style="background:rgba(255,255,255,0.1);border-radius:12px;padding:1rem 1.2rem;">
+              <div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:0.82rem;letter-spacing:1.5px;text-transform:uppercase;opacity:0.7;margin-bottom:0.3rem;">Medicina</div>
+              <div style="font-size:0.95rem;">Machis, lawen y conocimiento ancestral de plantas</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-band">
+  <h2>¿Quieres participar o colaborar?</h2>
+  <p>Apoya los proyectos culturales del Biobío como artista, voluntario o empresa patrocinadora.</p>
+  <a href="mailto:cultura@biobioimpulsa.cl" class="btn-cta-white">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+    Contactar al área de Cultura
+  </a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-md-5"><div class="footer-brand">Bio-Bío Impulsa</div><p style="color:rgba(255,255,255,0.65);font-size:0.9rem;max-width:280px;margin-top:0.4rem;line-height:1.6;">Fundación comprometida con el desarrollo integral de la Región del Biobío, Chile.</p></div>
+      <div class="col-md-3"><div class="footer-links-title">Navegación</div><div class="footer-links"><a href="index.html">Inicio</a><a href="educacion.html">Educación</a><a href="salud.html">Salud</a><a href="cultura.html">Cultura</a></div></div>
+      <div class="col-md-4"><div class="footer-links-title">Contacto</div><div class="footer-links"><a href="mailto:cultura@biobioimpulsa.cl">cultura@biobioimpulsa.cl</a><a href="#">Concepción, Biobío</a></div></div>
+    </div>
+    <hr class="footer-divider"/>
+    <div class="footer-copy">© 2025 Fundación Bio-Bío Impulsa · Concepción, Chile</div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => { if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), i * 100); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

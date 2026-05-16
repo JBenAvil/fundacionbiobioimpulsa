@@ -1,0 +1,10 @@
+{
+    "name": "Fundacion Bio-Bío Impulsa",
+    "icons": [
+      {
+        "src": "static/fundacion_logo.jpeg",
+        "type": "image/jpeg",
+        "sizes": "512x512"
+      }
+    ]
+  }
