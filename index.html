@@ -67,12 +67,12 @@
       font-size: 1.1rem;
       color: var(--azul);
       line-height: 1.2;
-      margin-left: 5px;
+      margin-left: 10px;
     }
 
     .navbar-nav .nav-link {
       font-family: 'Montserrat', sans-serif;
-      font-weight: 500;
+      font-weight: 600;
       font-size: 0.95rem;
       color: var(--azul) !important;
       display: flex;
@@ -605,8 +605,52 @@
       transform: translateY(0);
     }
 
-    /* ─── RESPONSIVE ─── */
-    @media (max-width: 991px) {
+    /* ─── MENÚ LATERAL MÓVIL (Efecto De Derecha a Izquierda) ─── */
+@media (max-width: 991px) {
+  .menu-movil-lateral {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Oculto completamente a la derecha */
+    width: 280px; /* Ancho del menú lateral */
+    height: 100vh;
+    background-color: var(--blanco, #ffffff);
+    box-shadow: -4px 0 16px rgba(0, 0, 0, 0.15);
+    z-index: 1050;
+    padding: 5rem 1.5rem 2rem 1.5rem;
+    transition: right 0.3s ease-in-out; /* Animación suave */
+    display: block !important; /* Sobrescribe el display none de Bootstrap */
+  }
+
+  /* Cuando Bootstrap activa la clase show, el menú entra en pantalla */
+  .menu-movil-lateral.show {
+      right: 0;
+    }
+
+    /* Forzamos que los items se listen verticalmente en móvil */
+    .menu-movil-lateral .navbar-nav {
+      flex-direction: column;
+      gap: 15px !important;
+    }
+
+    /* Botón X de Cierre */
+    .btn-close-menu {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 2.5rem;
+      line-height: 1;
+      color: #000000; /* Color Negro solicitado */
+      cursor: pointer;
+      padding: 0;
+      transition: transform 0.2s;
+    }
+
+    .btn-close-menu:hover {
+      transform: scale(1.1);
+    }
+
       
       .srv-img-col, .srv-icon-wrap {
         min-height: 260px;
@@ -630,61 +674,16 @@
     }
 
     /* Ajuste preventivo para que el logo no rompa la fila en móviles muy chicos */
-@media (max-width: 576px) {
-  .navbar-brand img {
-    height: 60px !important; /* Achicamos un poco la imagen en móviles */
-  }
-  .navbar-brand span {
-    font-size: 0.9rem !important; /* Letra levemente más pequeña */
-  }
-}
+    @media (max-width: 576px) {
+      .navbar-brand img {
+        height: 60px !important; /* Achicamos un poco la imagen en móviles */
+      }
+      .navbar-brand span {
+        font-size: 0.9rem !important; /* Letra levemente más pequeña */
+      }
+    }
 
-/* ─── MENÚ LATERAL MÓVIL (Efecto De Derecha a Izquierda) ─── */
-@media (max-width: 991px) {
-  .menu-movil-lateral {
-    position: fixed;
-    top: 0;
-    right: -100%; /* Oculto completamente a la derecha */
-    width: 280px; /* Ancho del menú lateral */
-    height: 100vh;
-    background-color: var(--blanco, #ffffff);
-    box-shadow: -4px 0 16px rgba(0, 0, 0, 0.15);
-    z-index: 1050;
-    padding: 5rem 1.5rem 2rem 1.5rem;
-    transition: right 0.3s ease-in-out; /* Animación suave */
-    display: block !important; /* Sobrescribe el display none de Bootstrap */
-  }
 
-  /* Cuando Bootstrap activa la clase show, el menú entra en pantalla */
-  .menu-movil-lateral.show {
-    right: 0;
-  }
-
-  /* Forzamos que los items se listen verticalmente en móvil */
-  .menu-movil-lateral .navbar-nav {
-    flex-direction: column;
-    gap: 15px !important;
-  }
-
-  /* Botón X de Cierre */
-  .btn-close-menu {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: none;
-    border: none;
-    font-size: 2.5rem;
-    line-height: 1;
-    color: #000000; /* Color Negro solicitado */
-    cursor: pointer;
-    padding: 0;
-    transition: transform 0.2s;
-  }
-
-  .btn-close-menu:hover {
-    transform: scale(1.1);
-  }
-}
   </style>
 </head>
 <body>
@@ -755,7 +754,7 @@
     <div class="row align-items-center">
       <!-- Texto (izquierda) -->
       <div class="col-lg-7 hero-content">
-        <div class="hero-badge">Desade la Región del Biobío · Chile</div>
+        <div class="hero-badge">Desde la Región del Biobío · Chile</div>
         <h1 class="hero-title">
           Impulsamos el<br/>
           <span>Futuro Juntos</span><br/>
@@ -961,7 +960,7 @@
         <div class="footer-links-title">Contacto</div>
         <div class="footer-links">
           <a href="mailto:fundacionbiobioimpulsa@gmail.com">fundacionbiobioimpulsa@gmail.com</a>
-          <a href="tel:+56412345678">+56 41 234 5678</a>
+          <a href="tel:+56412345678">+56 9 21951687</a>
         </div>
       </div>
     </div>

@@ -56,7 +56,7 @@
     }
 
     .navbar-brand {
-      height: 100px;
+      height: 100%;
     }
 
     .navbar-brand span {
@@ -395,26 +395,114 @@
     @media (max-width: 767px) {
       .stat-divider { border-left: none; border-top: 1.5px solid #e2e8f0; }
     }
+        /* ─── MENÚ LATERAL MÓVIL (Efecto De Derecha a Izquierda) ─── */
+@media (max-width: 991px) {
+  .menu-movil-lateral {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Oculto completamente a la derecha */
+    width: 280px; /* Ancho del menú lateral */
+    height: 100vh;
+    background-color: var(--blanco, #ffffff);
+    box-shadow: -4px 0 16px rgba(0, 0, 0, 0.15);
+    z-index: 1050;
+    padding: 5rem 1.5rem 2rem 1.5rem;
+    transition: right 0.3s ease-in-out; /* Animación suave */
+    display: block !important; /* Sobrescribe el display none de Bootstrap */
+  }
+
+  /* Cuando Bootstrap activa la clase show, el menú entra en pantalla */
+  .menu-movil-lateral.show {
+      right: 0;
+    }
+
+    /* Forzamos que los items se listen verticalmente en móvil */
+    .menu-movil-lateral .navbar-nav {
+      flex-direction: column;
+      gap: 15px !important;
+    }
+
+    /* Botón X de Cierre */
+    .btn-close-menu {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 2.5rem;
+      line-height: 1;
+      color: #000000; /* Color Negro solicitado */
+      cursor: pointer;
+      padding: 0;
+      transition: transform 0.2s;
+    }
+
+    .btn-close-menu:hover {
+      transform: scale(1.1);
+    }
+
+      
+      .srv-img-col, .srv-icon-wrap {
+        min-height: 260px;
+      }
+      .srv-info-col {
+        padding: 2.5rem 2rem !important;
+      }
+      .hero-logo-card {
+        margin-top: 2rem;
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      #inicio { min-height: 100svh; }
+      .servicio-edu .row, .servicio-salud .row, .servicio-cultura .row {
+        flex-direction: column !important;
+      }
+      .srv-img-col { min-height: 200px; }
+      .srv-info-col { padding: 2rem 1.5rem !important; }
+    }
+
+    /* Ajuste preventivo para que el logo no rompa la fila en móviles muy chicos */
+    @media (max-width: 576px) {
+      .navbar-brand img {
+        height: 60px !important; /* Achicamos un poco la imagen en móviles */
+      }
+      .navbar-brand span {
+        font-size: 0.9rem !important; /* Letra levemente más pequeña */
+      }
+    }
+
+
   </style>
 </head>
 <body>
+<script src="app.js"></script>
 
 <!-- ╔══════════════════════════════╗ -->
 <!-- ║           NAVBAR             ║ -->
 <!-- ╚══════════════════════════════╝ -->
 <nav class="navbar navbar-expand-lg">
   <div class="container-fluid px-4">
-    <!-- Brand con logo SVG inline -->
+    <!-- Brand con logo -->
     <a class="navbar-brand d-flex align-items-center" href="index.html">
-      <img src="static/fundacion_logo.jpeg" height="100px" width="100px">
+      <img src="static/fundacion_logo.jpeg" height="80px" width="auto" class="nav-logo-img">
       <span>Fundación<br/>Bio-Bío Impulsa</span>
     </a>
 
+    <!-- Botón Hamburguesa -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+    <!-- Menú Desplegable (Ahora Lateral en Móvil) -->
+    <div class="collapse navbar-collapse justify-content-end menu-movil-lateral" id="navMenu">
+      
+      <!-- Botón X para cerrar en móvil -->
+      <button class="btn-close-menu d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        &times;
+      </button>
+
       <ul class="navbar-nav gap-1">
         <li class="nav-item">
           <a class="nav-link" href="index.html">
@@ -714,7 +802,7 @@
         <div class="footer-links-title">Contacto</div>
         <div class="footer-links">
           <a href="mailto:fundacionbiobioimpulsa@gmail.coml">fundacionbiobioimpulsa@gmail.com</a>
-          <a href="tel:+56412345678">+56 41 234 5678</a>
+          <a href="tel:+56412345678">+56 9 21951687</a>
         </div>
       </div>
     </div>
