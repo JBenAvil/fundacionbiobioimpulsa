@@ -401,6 +401,27 @@
       transform: translateY(-3px) scale(1.05); 
     }
 
+    .btn-ver-curso {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 0.5rem;
+      background: var(--azul);
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 9px 18px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: transform 0.2s, background 0.2s;
+    }
+    .btn-ver-curso:hover {
+      background: var(--rojo);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
 
     @media (max-width: 767px) {
       .stat-divider { border-left: none; border-top: 1.5px solid #e2e8f0; }
@@ -520,6 +541,14 @@
             Inicio
           </a>
         </li>
+        <!--
+        <li class="nav-item">
+          <a class="nav-link" href="noticias.html">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm-1 16H5V5h14v14zM7 8h10v2H7V8zm0 4h10v2H7v-2zm0 4h6v2H7v-2z"/></svg>
+            Noticias
+          </a>
+        </li>
+        -->
         <li class="nav-item">
           <a class="nav-link" href="educacion.html">
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
@@ -538,6 +567,16 @@
             Cultura
           </a>
         </li>
+        <!---
+        <li class="nav-item">
+          <a class="nav-link" href="biblioteca.html">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21 4H3c-1.1 0-2 .9-2 2v13c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM3 19V6h8v13H3zm18 0h-8V6h8v13zm-7-9.5h6V11h-6zm0 2.5h6v1.5h-6zm0 2.5h6V16h-6z" />
+            </svg>
+            Biblioteca
+          </a>
+        </li>
+        -->
       </ul>
     </div>
   </div>
@@ -604,8 +643,10 @@
           <div class="prog-card-body">
             <div class="prog-tag">10 hrs</div>
             <div class="prog-tag">CLP $99.990 - USD $120,00</div>
-            <h5>Formalización de Empresas</h5>
-            <p style="text-align: justify;">El curso está diseñado exclusivamente para guiarte, de forma práctica, durante todo el proceso de formalización de una empresa. Con énfasis en la aclaración de requisitos legales y los pasos claves que deberás llevar a cabo para formalizar tu Empresa.</p>
+                <a href="curso-detalle.html?curso=formalizacion-empresas" class="btn-ver-curso">
+                  Ver más detalles
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                </a>
           </div>
         </div>
       </div>
@@ -617,8 +658,10 @@
           <div class="prog-card-body">
             <div class="prog-tag">10 hrs</div>
             <div class="prog-tag">CLP $99.990 - USD $120,00</div>
-            <h5>Contabilidad y Gestión Tributaria</h5>
-            <p style="text-align: justify;">Hazles frente a tus obligaciones tributarias, desde la declaración de impuesto mensual y modificaciones DAS hasta la solicitud de peticiones administrativas al SII.</p>
+                <a href="curso-detalle.html?curso=contabilidad-tributaria" class="btn-ver-curso">
+                  Ver más detalles
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                </a>
           </div>
         </div>
       </div>
@@ -630,8 +673,10 @@
           <div class="prog-card-body">
             <div class="prog-tag">10 hrs</div>
             <div class="prog-tag">CLP $99.990 - USD $120,00</div>
-            <h5>Diseño de Producto</h5>
-            <p style="text-align: justify;">Aprende a crear y darle un estilo único a tus productos, determinar los costos de adquisición y determinar el precio del producto final. Desde el diseño de packaging, tabla nutricional, sellos y códigos de barra para la comercialización.</p>
+                <a href="curso-detalle.html?curso=diseno-producto" class="btn-ver-curso">
+                  Ver más detalles
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                </a>
           </div>
         </div>
       </div>
@@ -643,8 +688,10 @@
           <div class="prog-card-body">
             <div class="prog-tag">10 hrs</div>
             <div class="prog-tag">CLP $99.990 - USD $120,00</div>
-            <h5>Diseño de Páginas Web</h5>
-            <p style="text-align: justify;">Con un enfoque en el diseño de páginas web para empresas con tecnologías Frontend, este curso está diseñado para crear y mantener un entorno de desarrollo para la codificación de páginas webs realizadas con tecnologías como HTML, CSS + BOOTSTRAP y JS. Además de la configuración de tu entorno de desarrollo con VSC, GIT, GITHUB y VERCEL.</p>
+                <a href="curso-detalle.html?curso=diseno-web" class="btn-ver-curso">
+                  Ver más detalles
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                </a>
           </div>
         </div>
       </div>
@@ -656,8 +703,10 @@
           <div class="prog-card-body">
             <div class="prog-tag">10 hrs</div>
             <div class="prog-tag">CLP $99.990 - USD $120,00</div>
-            <h5>Ofimática</h5>
-            <p style="text-align: justify;">Aprende a usar herramientas de digitalización para tu trabajo o emprendimiento, desde alfabetización digital, profundizando herramientas claves como Microsoft Word, Excel, PowerPoint.</p>
+                <a href="curso-detalle.html?curso=ofimatica" class="btn-ver-curso">
+                  Ver más detalles
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                </a>
           </div>
         </div>
       </div>
@@ -669,8 +718,10 @@
           <div class="prog-card-body">
             <div class="prog-tag">10 hrs</div>
             <div class="prog-tag">CLP $99.990 - USD $120,00</div>
-            <h5>Marketing Digital</h5>
-            <p style="text-align: justify;">Diseña y publica anuncios con enfoque en la contactabilidad de nuevos clientes o usuarios para tu negocio, desde el diseño gráfico en Canva hasta la circulación en Meta Ads. Aprende a interpretar las métricas y a crear procesos de toma de decisiones ante los resultados medibles.</p>
+                <a href="curso-detalle.html?curso=marketing-digital" class="btn-ver-curso">
+                  Ver más detalles
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                </a>
           </div>
         </div>
       </div>
@@ -682,8 +733,10 @@
           <div class="prog-card-body">
             <div class="prog-tag">10 hrs</div>
             <div class="prog-tag">CLP $99.990 - USD $120,00</div>
-            <h5>Mercado Público</h5>
-            <p style="text-align: justify;">Aprende a registrar tu emprendimiento en Mercado Público y a vender tus productos y servicios a través de Licitaciones y Compra Ágil. Con un enfoque en potenciar a emprendedores, a través de revisión de propuesta y presupuesto, este curso te permitirá dar el siguiente paso para tu crecimiento.</p>
+                <a href="curso-detalle.html?curso=mercado-publico" class="btn-ver-curso">
+                  Ver más detalles
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                </a>
           </div>
         </div>
       </div>
@@ -695,8 +748,10 @@
           <div class="prog-card-body">
             <div class="prog-tag">10 hrs</div>
             <div class="prog-tag">CLP $99.990 - USD $120,00</div>
-            <h5>Gestión de RRHH</h5>
-            <p style="text-align: justify;">Todo lo que necesitas saber de la Gestión de Recursos Humanos, desde diseño cargos, contratación y finiquitos, pagos previsionales y trámites necesarios en la Dirección del Trabajo para la correcta Gestión de Personas.</p>
+                <a href="curso-detalle.html?curso=gestion-rrhh" class="btn-ver-curso">
+                  Ver más detalles
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                </a>
           </div>
         </div>
       </div>
@@ -708,12 +763,14 @@
           <div class="prog-card-body">
             <div class="prog-tag">10 hrs</div>
             <div class="prog-tag">CLP $99.990 - USD $120,00</div>
-            <h5>Registro de Marca</h5>
-            <p style="text-align: justify;">Aprende como registrar tu propiedad intelectual como marca personal artistica en el DDI y tu marca empreserial en el INAPI, procedimientos administrativos, costos, alcances y todo lo que necesitas saber antes de comercializar tus productos o servicios.</p>
+                <a href="curso-detalle.html?curso=registro-marca" class="btn-ver-curso">
+                  Ver más detalles
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                </a>
           </div>
         </div>
       </div>
-  </div>
+    </div>
 </section>
 
 <!-- TIMELINE -->
@@ -805,6 +862,7 @@
           <a href="educacion.html">Educación</a>
           <a href="salud.html">Salud</a>
           <a href="cultura.html">Cultura</a>
+          <!--<a href="biblioteca.html">Biblioteca</a>-->
         </div>
       </div>
 
@@ -826,92 +884,5 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="app.js"></script>
-<script>
-
-function loadData() {
-    console.log('Datos cargados');
-}
-
-
-function initNavigation() {
-
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-
-        a.addEventListener('click', function(e) {
-
-            const target = document.querySelector(
-                this.getAttribute('href')
-            );
-
-            if (target) {
-
-                e.preventDefault();
-
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
-
-            }
-
-        });
-
-    });
-
-}
-  // Fade-in on scroll
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((e, i) => {
-      if (e.isIntersecting) {
-        setTimeout(() => e.target.classList.add('visible'), i * 120);
-      }
-    });
-  }, { threshold: 0.15 });
-
-  document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
-
-  // Smooth scroll
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', function(e) {
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-  });
-
-  // Botón flotante de WhatsApp
-function initWhatsAppButton() {
-    const whatsappBtn = document.getElementById('whatsappBtn');
-    if (whatsappBtn) {
-        whatsappBtn.addEventListener('click', function() {
-            const mensaje = encodeURIComponent('Hola, me pueden agendar una reunión');
-            const telefono = '56921951687';
-            window.open(`https://wa.me/${telefono}?text=${mensaje}`, '_blank');
-        });
-    }
-}
-
-  // Botón flotante de WhatsApp
-function initWhatsAppButton_2() {
-    const whatsappBtn = document.getElementById('whatsappBtn_2');
-    if (whatsappBtn) {
-        whatsappBtn.addEventListener('click', function() {
-            const mensaje = encodeURIComponent('Hola, quiero Donar o Servir');
-            const telefono = '56921951687';
-            window.open(`https://wa.me/${telefono}?text=${mensaje}`, '_blank');
-        });
-    }
-}
-
-// Inicialización cuando el DOM está listo
-document.addEventListener('DOMContentLoaded', function() {
-    loadData();
-    initWhatsAppButton();
-    initWhatsAppButton_2();
-    initNavigation();
-});
-</script>
 </body>
 </html>

@@ -1,0 +1,68 @@
+[
+  {
+    "id": "inauguracion-biblioteca-2026",
+    "titulo": "Fundación Bio-Bío Impulsa inaugura su primera Biblioteca Digital",
+    "resumen": "Un nuevo espacio pensado para acercar la lectura y el aprendizaje a niñas, niños y familias de la región del Biobío.",
+    "imagenPortada": "static/noticias/inauguracion-biblioteca/portada.jpg",
+    "fecha": "2026-06-12",
+    "categoria": "Educación",
+    "contenido": [
+      {
+        "tipo": "imagen-izq",
+        "imagen": "static/noticias/inauguracion-biblioteca/foto1.jpg",
+        "texto": "El pasado 12 de junio, la Fundación Bio-Bío Impulsa dio inicio oficial a su Biblioteca Digital, un espacio gratuito donde niñas, niños y sus familias pueden acceder a libros de colorear, cuentos y material educativo descargable. La actividad reunió a más de 80 personas de distintas organizaciones sociales aliadas de la región."
+      },
+      {
+        "tipo": "imagen-der",
+        "imagen": "static/noticias/inauguracion-biblioteca/foto2.jpg",
+        "texto": "Durante la jornada se realizó un taller de cuentacuentos a cargo de voluntarios de la Fundación, además de la entrega de los primeros ejemplares impresos a los asistentes. El director de la Fundación, Juan Benavides Ávila, destacó el compromiso de la organización con el acceso equitativo a la educación."
+      }
+    ],
+    "galeria": [
+      "static/noticias/inauguracion-biblioteca/galeria1.jpg",
+      "static/noticias/inauguracion-biblioteca/galeria2.jpg",
+      "static/noticias/inauguracion-biblioteca/galeria3.jpg",
+      "static/noticias/inauguracion-biblioteca/galeria4.jpg"
+    ]
+  },
+  {
+    "id": "operativo-salud-coronel",
+    "titulo": "Más de 300 personas atendidas en operativo de salud en Coronel",
+    "resumen": "El equipo de salud de la Fundación llevó controles médicos gratuitos a la comuna de Coronel durante dos jornadas.",
+    "imagenPortada": "static/noticias/operativo-coronel/portada.jpg",
+    "fecha": "2026-05-04",
+    "categoria": "Salud",
+    "contenido": [
+      {
+        "tipo": "imagen-izq",
+        "imagen": "static/noticias/operativo-coronel/foto1.jpg",
+        "texto": "Durante dos jornadas consecutivas, un equipo multidisciplinario de la Fundación Bio-Bío Impulsa instaló un operativo de salud gratuito en la comuna de Coronel, entregando controles preventivos, toma de presión y orientación nutricional a más de 300 vecinos y vecinas del sector."
+      }
+    ],
+    "galeria": []
+  },
+  {
+    "id": "cierre-cursos-formalizacion",
+    "titulo": "38 emprendedores se titulan del curso de Formalización de Empresas",
+    "resumen": "Egresó la segunda generación del programa de becas educativas, con foco en el desarrollo de microemprendimientos locales.",
+    "imagenPortada": "static/noticias/cierre-formalizacion/portada.jpg",
+    "fecha": "2026-04-20",
+    "categoria": "Educación",
+    "contenido": [
+      {
+        "tipo": "imagen-izq",
+        "imagen": "static/noticias/cierre-formalizacion/foto1.jpg",
+        "texto": "Con una ceremonia de certificación, 38 emprendedores y emprendedoras de la región culminaron el curso de Formalización de Empresas, financiado en un 100% por la Fundación a través de su programa de becas para organizaciones sociales."
+      },
+      {
+        "tipo": "imagen-der",
+        "imagen": "static/noticias/cierre-formalizacion/foto2.jpg",
+        "texto": "El curso, dictado en modalidad presencial durante 10 horas, abordó los requisitos legales y pasos clave para formalizar un negocio en Chile, entregando herramientas concretas para su aplicación inmediata."
+      }
+    ],
+    "galeria": [
+      "static/noticias/cierre-formalizacion/galeria1.jpg",
+      "static/noticias/cierre-formalizacion/galeria2.jpg"
+    ]
+  }
+]
