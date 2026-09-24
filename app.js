@@ -266,6 +266,8 @@ async function initNoticiaDetalle() {
 
         const bloquesHTML = noticia.contenido.map(b => {
             const filaClass = b.tipo === 'imagen-der' ? 'row g-0 flex-lg-row-reverse' : 'row g-0';
+            const textoConSaltos = b.texto ? b.texto.replace(/\n/g, '<br>') : '';
+            
             return `
                 <div class="noticia-bloque fade-in-up">
                   <div class="${filaClass}">
@@ -273,7 +275,7 @@ async function initNoticiaDetalle() {
                       <img src="${b.imagen}" alt="${noticia.titulo}">
                     </div>
                     <div class="col-lg-7 noticia-bloque-texto">
-                      <p>${b.texto}</p>
+                      <p>${textoConSaltos}</p>
                     </div>
                   </div>
                 </div>

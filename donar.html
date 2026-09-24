@@ -811,6 +811,95 @@
       .libro-titulo { font-size: 0.95rem; }
     }
 
+    :root{--azul:#1565C0;--azul-osc:#0d47a1;--rojo:#C62828;--mp:#009ee3;--tb:#6B2D8B;--gris:#f5f7fa;}
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Open Sans',sans-serif;color:#1a1a2e;background:#fff;}
+ 
+    /* HERO */
+    .don-hero{background:linear-gradient(135deg,var(--azul-osc) 0%,var(--azul) 55%,#1976D2 100%);padding:5rem 2rem 4rem;color:#fff;text-align:center;position:relative;overflow:hidden;}
+    .don-hero::before{content:'';position:absolute;width:480px;height:480px;border-radius:50%;background:rgba(255,255,255,.04);top:-140px;right:-80px;}
+    .don-hero::after{content:'';position:absolute;width:260px;height:260px;border-radius:50%;background:rgba(198,40,40,.13);bottom:-70px;left:-50px;}
+    .don-hero-badge{display:inline-block;background:rgba(255,255,255,.14);border:1.5px solid rgba(255,255,255,.35);font-family:'Montserrat',sans-serif;font-weight:700;font-size:.78rem;letter-spacing:2.5px;text-transform:uppercase;padding:5px 18px;border-radius:50px;margin-bottom:1.2rem;position:relative;z-index:1;}
+    .don-hero h1{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(2rem,5vw,3.2rem);position:relative;z-index:1;margin-bottom:.8rem;}
+    .don-hero p{font-size:1.08rem;opacity:.88;max-width:580px;margin:0 auto;line-height:1.7;position:relative;z-index:1;}
+ 
+    /* TÍTULOS */
+    .sec-label{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.78rem;letter-spacing:3px;text-transform:uppercase;color:#aaa;margin-bottom:.5rem;}
+    .sec-title{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(1.5rem,3vw,2.2rem);color:var(--azul);margin-bottom:.5rem;}
+    .sec-line{width:52px;height:4px;background:var(--azul);border-radius:2px;margin-bottom:1rem;}
+ 
+    /* TRANSFERENCIA */
+    .transferencia-box{background:#fff;border:2px solid rgba(21,101,192,.15);border-radius:24px;padding:2.4rem 2rem;box-shadow:0 6px 28px rgba(21,101,192,.09);}
+    .cuenta-row{display:flex;align-items:flex-start;gap:14px;padding:1rem 0;border-bottom:1px solid #f0f4fb;}
+    .cuenta-row:last-child{border-bottom:none;}
+    .cuenta-icon{width:40px;height:40px;border-radius:10px;background:rgba(21,101,192,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+    .cuenta-icon svg{fill:var(--azul);width:20px;height:20px;}
+    .cuenta-label{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;color:#aaa;margin-bottom:.2rem;}
+    .cuenta-valor{font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.02rem;color:#1a1a2e;}
+    .cuenta-valor.highlight{color:var(--azul);font-size:1.1rem;}
+    .btn-copiar{margin-left:auto;flex-shrink:0;background:rgba(21,101,192,.09);border:none;border-radius:8px;padding:6px 12px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.75rem;color:var(--azul);cursor:pointer;transition:background .18s,transform .18s;}
+    .btn-copiar:hover{background:var(--azul);color:#fff;transform:scale(1.05);}
+    .btn-copiar.copiado{background:#2e7d32;color:#fff;}
+ 
+    /* PASARELAS */
+    .pasarela-section{background:var(--gris);padding:4.5rem 0;}
+    .pasarela-card{background:#fff;border-radius:20px;padding:2rem 1.8rem;box-shadow:0 4px 20px rgba(0,0,0,.07);text-align:center;height:100%;border:1.5px solid rgba(0,0,0,.05);display:flex;flex-direction:column;align-items:center;}
+    .pasarela-card p{font-size:.9rem;color:#777;line-height:1.6;margin-bottom:1.4rem;flex:1;}
+    .pasarela-logo{font-family:'Montserrat',sans-serif;font-weight:900;font-size:1.3rem;margin-bottom:.6rem;display:flex;align-items:center;justify-content:center;gap:8px;}
+    .btn-mp{display:inline-flex;align-items:center;gap:10px;background:var(--mp);color:#fff;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.95rem;padding:14px 28px;border-radius:50px;text-decoration:none;box-shadow:0 6px 24px rgba(0,158,227,.35);transition:transform .22s cubic-bezier(.34,1.56,.64,1),box-shadow .2s,background .2s;}
+    .btn-mp:hover{background:#0083c9;color:#fff;transform:translateY(-3px) scale(1.04);box-shadow:0 12px 32px rgba(0,158,227,.45);}
+    .btn-tb{display:inline-flex;align-items:center;gap:10px;background:var(--tb);color:#fff;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.95rem;padding:14px 28px;border-radius:50px;text-decoration:none;box-shadow:0 6px 24px rgba(107,45,139,.35);transition:transform .22s cubic-bezier(.34,1.56,.64,1),box-shadow .2s,background .2s;}
+    .btn-tb:hover{background:#57236f;color:#fff;transform:translateY(-3px) scale(1.04);box-shadow:0 12px 32px rgba(107,45,139,.45);}
+ 
+    /* SOCIOS */
+    .socios-section{padding:5rem 0;background:#fff;}
+    .socio-card{border-radius:24px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,.10);height:100%;display:flex;flex-direction:column;transition:transform .28s cubic-bezier(.34,1.56,.64,1),box-shadow .2s;border:2px solid transparent;}
+    .socio-card:hover{transform:translateY(-10px);box-shadow:0 20px 50px rgba(0,0,0,.16);}
+    .socio-bronce{border-color:#CD7F32;}
+    .socio-bronce .socio-header{background:linear-gradient(135deg,#a0522d 0%,#CD7F32 100%);}
+    .socio-bronce .btn-suscribir{background:#CD7F32;}
+    .socio-bronce .btn-suscribir:hover{background:#a0522d;}
+    .socio-bronce .socio-price-num{color:#CD7F32;}
+    .socio-plata{border-color:#8e9eab;}
+    .socio-plata .socio-header{background:linear-gradient(135deg,#536878 0%,#8e9eab 100%);}
+    .socio-plata .btn-suscribir{background:linear-gradient(135deg,#536878 0%,#8e9eab 100%);}
+    .socio-plata .btn-suscribir:hover{background:#3e5060;}
+    .socio-plata .socio-price-num{color:#536878;}
+    .socio-oro{border-color:#d4af37;}
+    .socio-oro .socio-header{background:linear-gradient(135deg,#b8860b 0%,#d4af37 60%,#ffe066 100%);}
+    .socio-oro .btn-suscribir{background:linear-gradient(135deg,#b8860b 0%,#d4af37 100%);}
+    .socio-oro .btn-suscribir:hover{background:#9a6f0a;}
+    .socio-oro .socio-price-num{color:#b8860b;}
+    .socio-header{padding:2rem 1.8rem 1.5rem;color:#fff;text-align:center;position:relative;}
+    .socio-medal{font-size:2.8rem;margin-bottom:.5rem;display:block;filter:drop-shadow(0 2px 6px rgba(0,0,0,.25));}
+    .socio-nombre{font-family:'Montserrat',sans-serif;font-weight:900;font-size:1.3rem;text-shadow:0 1px 4px rgba(0,0,0,.2);}
+    .socio-popular{position:absolute;top:14px;right:14px;background:rgba(255,255,255,.22);border:1.5px solid rgba(255,255,255,.45);color:#fff;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.68rem;letter-spacing:1.5px;text-transform:uppercase;padding:3px 10px;border-radius:20px;}
+    .socio-body{background:#fff;padding:1.8rem 1.8rem 2rem;flex:1;display:flex;flex-direction:column;}
+    .socio-price{text-align:center;margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1.5px solid #f0f0f0;}
+    .socio-price-num{font-family:'Montserrat',sans-serif;font-weight:900;font-size:2.4rem;line-height:1;}
+    .socio-price-per{font-family:'Montserrat',sans-serif;font-weight:600;font-size:.82rem;color:#aaa;}
+    .socio-beneficios{list-style:none;flex:1;margin-bottom:1.8rem;}
+    .socio-beneficios li{display:flex;align-items:flex-start;gap:10px;font-size:.9rem;color:#444;line-height:1.55;margin-bottom:.9rem;}
+    .socio-beneficios li svg{flex-shrink:0;margin-top:2px;}
+    .btn-suscribir{display:flex;align-items:center;justify-content:center;gap:10px;color:#fff;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.95rem;padding:14px 20px;border-radius:50px;text-decoration:none;border:none;cursor:pointer;transition:transform .22s cubic-bezier(.34,1.56,.64,1),box-shadow .2s;box-shadow:0 6px 20px rgba(0,0,0,.15);}
+    .btn-suscribir:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 10px 28px rgba(0,0,0,.22);color:#fff;text-decoration:none;}
+ 
+    /* SOCIOS INTRO */
+    .socios-intro{background:linear-gradient(135deg,var(--azul-osc) 0%,var(--azul) 100%);border-radius:20px;padding:2.4rem;color:#fff;margin-bottom:3rem;position:relative;overflow:hidden;}
+    .socios-intro::after{content:'';position:absolute;width:280px;height:280px;border-radius:50%;background:rgba(255,255,255,.05);top:-80px;right:-60px;}
+    .socios-intro h3{font-family:'Montserrat',sans-serif;font-weight:900;font-size:1.4rem;margin-bottom:.6rem;position:relative;z-index:1;}
+    .socios-intro p{font-size:.95rem;opacity:.88;line-height:1.7;position:relative;z-index:1;}
+ 
+    /* BANNER CERTIFICADO */
+    .certificado-banner{background:var(--azul);color:#fff;padding:2.2rem 2rem;text-align:center;}
+    .certificado-banner p{font-size:clamp(.9rem,2vw,1.05rem);margin:0 auto;}
+    .cert-link{color:#ffeb3b;font-weight:700;text-decoration:none;}
+    .cert-link:hover{opacity:.8;text-decoration:underline;color:#ffeb3b;}
+ 
+    /* ANIM */
+    .fade-in-up{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease;}
+    .fade-in-up.visible{opacity:1;transform:translateY(0);}
+
 
   </style>
 </head>
@@ -904,193 +993,252 @@
     <div class="row align-items-center">
       <!-- Texto (izquierda) -->
       <div class="col-lg-7 hero-content">
-        <div class="hero-badge">BIENVENIDOS</div>
+        <div class="hero-badge">DONAR</div>
         <h1 class="hero-title">
-          A NUESTRA<br/>
-          <span>BIBLIOTECA</span><br/>
+          <br/>
+          <span>Tu aporte Impulsa y trasforma nuestra comunidad.</span><br/>
         </h1>
         <p class="hero-desc">
-          Libros gratis que Impulsan el desarrollo cognitivos de tus hijos, potencias a Emprendedores y Fortalecen al Educación Integral de Todos.
+          
         </p>
         
       </div>
 
-      <!-- Card Logo (derecha) -->
-      <div class="col-lg-5 hero-img-col ">
-          <img src="static/director_fundacion_juan_benavides_avila.png" height="100%" width="100%">
+      
+    </div>
+  </div>
+</section>
+ 
+ 
+<!-- ══════════════════════════════
+     TRANSFERENCIA BANCARIA
+══════════════════════════════ -->
+<section style="padding:5rem 0;background:#fff;">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+ 
+      <!-- Datos -->
+      <div class="col-lg-7 fade-in-up">
+        <div class="sec-label">Opción 1</div>
+        <div class="sec-line"></div>
+        <h2 class="sec-title">Transferencia directa</h2>
+        <p style="color:#666;font-size:.97rem;line-height:1.7;margin-bottom:1.8rem;">Realiza tu donación directamente a nuestra cuenta bancaria. Incluye el motivo <strong>"Donación"</strong> para que podamos registrar tu aporte.</p>
+ 
+        <div class="transferencia-box">
+ 
+          <div class="cuenta-row">
+            <div class="cuenta-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg></div>
+            <div><div class="cuenta-label">Nombre</div><div class="cuenta-valor">Fundación Bio-Bío Impulsa</div></div>
+          </div>
+
+          <div class="cuenta-row">
+            <div class="cuenta-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg></div>
+            <div><div class="cuenta-label">RUT</div><div class="cuenta-valor">65.281.112-4</div></div>
+          </div>
+ 
+          <div class="cuenta-row">
+            <div class="cuenta-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg></div>
+            <div><div class="cuenta-label">Tipo de cuenta</div><div class="cuenta-valor">Chequera Electrónica</div></div>
+          </div>
+ 
+          <div class="cuenta-row">
+            <div class="cuenta-icon"><svg viewBox="0 0 24 24"><path d="M2 9h19.5M2 15h19.5M12 3a15 15 0 010 18M12 3a15 15 0 000 18M2 12h20"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg></div>
+            <div style="flex:1;"><div class="cuenta-label">N° de cuenta</div><div class="cuenta-valor highlight">56370504941</div></div>
+          </div>
+ 
+          <div class="cuenta-row">
+            <div class="cuenta-icon"><svg viewBox="0 0 24 24"><path d="M4 9h16v2H4zm0 4h10v2H4z"/><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg></div>
+            <div><div class="cuenta-label">Banco</div><div class="cuenta-valor">Banco Estado</div></div>
+          </div>
+ 
+          <div class="cuenta-row">
+            <div class="cuenta-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+            <div style="flex:1;"><div class="cuenta-label">Correo</div><div class="cuenta-valor highlight" style="font-size:.92rem;">fundacionbiobioimpulsa@gmail.com</div></div>
+          </div>
+ 
+          <div class="cuenta-row">
+            <div class="cuenta-icon"><svg viewBox="0 0 24 24"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg></div>
+            <div><div class="cuenta-label">Motivo de transferencia</div><div class="cuenta-valor" style="color:var(--rojo);">Donación</div></div>
+          </div>
+ 
+        </div>
       </div>
     </div>
   </div>
 </section>
-
-
-<!-- ╔══════════════════════════════╗ -->
-<!-- ║       SECCIÓN 2: BIBLIOTECA  ║ -->
-<!-- ╚══════════════════════════════╝ -->
-<section id="servicios" class="biblioteca-section">
+ 
+ 
+<!-- ══════════════════════════════
+     PASARELAS
+══════════════════════════════ -->
+<section class="pasarela-section">
   <div class="container">
     <div class="text-center mb-5 fade-in-up">
-      <div class="section-line mx-auto" style="background:var(--azul);"></div>
-      <h2 class="section-title" style="color:var(--azul);">Libros para Colorear</h2>
-      <p class="sec-sub mx-auto mt-2" style="color:#4a5568; max-width:560px;">
-        Descarga gratis nuestros libros de colorear, pensados para impulsar el desarrollo cognitivo y creativo de niñas y niños.
-      </p>
+      <div class="sec-label">Opción 2</div>
+      <div class="sec-line mx-auto"></div>
+      <h2 class="sec-title">Dona con tarjeta o débito</h2>
+      <p style="color:#666;max-width:520px;margin:0 auto;font-size:.97rem;line-height:1.7;">Elige tu pasarela de pago preferida. El proceso es rápido, seguro y puedes donar el monto que quieras.</p>
     </div>
-
-    <div class="row g-4">
-
-      <!-- Libro 1 -->
-      <div class="col-6 col-md-4 col-lg-3 fade-in-up">
-        <div class="libro-card h-100">
-          <div class="libro-cover">
-            <img src="libros/portadas/portada_animales_africa.jpeg" alt="Colorea los Animales">
+    <div class="row g-4 justify-content-center">
+ 
+      <!-- Mercado Pago -->
+      <div class="col-sm-10 col-md-5 col-lg-4 fade-in-up">
+        <div class="pasarela-card">
+          <div class="pasarela-logo" style="color:var(--mp);">
+            <img src="static/icon_mercado_pago.webp" width="50px" height="auto">
+            Mercado Pago
           </div>
-          <div class="libro-body">
-            <div class="libro-tag">Colorear</div>
-            <h5 class="libro-titulo">Animalitos de África</h5>
-            <a href="libros/animalitos_de_africa.pdf" download class="btn-descargar">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-              Descargar ahora
-            </a>
-          </div>
+          <p>Paga con tarjeta de crédito, débito, o saldo de Mercado Pago.
+            <br>
+            Proceso rápido y 100% seguro.</p>
+          <a href="https://link.mercadopago.cl/biobioimpulsa" class="btn-mp">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
+            Donar con Mercado Pago
+          </a>
         </div>
       </div>
-
-      <!-- Libro 2 -->
-      <div class="col-6 col-md-4 col-lg-3 fade-in-up">
-        <div class="libro-card h-100">
-          <div class="libro-cover">
-            <img src="libros/portadas/portada_oso_pintoso1.jpeg" alt="Aprendo con los Números">
+ 
+      <!-- Transbank 
+      <div class="col-sm-10 col-md-5 col-lg-4 fade-in-up">
+        <div class="pasarela-card">
+          <div class="pasarela-logo" style="color:var(--tb);">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="var(--tb)"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
+            Transbank
           </div>
-          <div class="libro-body">
-            <div class="libro-tag">Colorear</div>
-            <h5 class="libro-titulo">El Oso Pintoso</h5>
-            <a href="libros/el_oso_pintoso.pdf" download class="btn-descargar">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-              Descargar ahora
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Libro 3 -->
-      <div class="col-6 col-md-4 col-lg-3 fade-in-up">
-        <div class="libro-card h-100">
-          <div class="libro-cover">
-            <img src="libros/portadas/portada_las_vocales.jpeg" alt="Descubre la Naturaleza">
-          </div>
-          <div class="libro-body">
-            <div class="libro-tag">Colorear</div>
-            <h5 class="libro-titulo">Las Vocales</h5>
-            <a href="libros/vocales.pdf" download class="btn-descargar">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-              Descargar ahora
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Libro 4 -->
-      <div class="col-6 col-md-4 col-lg-3 fade-in-up">
-        <div class="libro-card h-100">
-          <div class="libro-cover">
-            <img src="libros/portadas/portada_mi_hermosa_familia.jpeg" alt="Cuando Sea Grande">
-          </div>
-          <div class="libro-body">
-            <div class="libro-tag">Colorear</div>
-            <h5 class="libro-titulo">Mí Hermosa Familia</h5>
-            <a href="libros/mi_hermosa_familia.pdf" download class="btn-descargar">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-              Descargar ahora
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Libro 5 -->
-      <div class="col-6 col-md-4 col-lg-3 fade-in-up">
-        <div class="libro-card h-100">
-          <div class="libro-cover">
-            <img src="libros/portadas/portada_primeros_numeros.jpeg" alt="Mi Chile Querido">
-          </div>
-          <div class="libro-body">
-            <div class="libro-tag">Colorear</div>
-            <h5 class="libro-titulo">Primeros Números Naturales y Romanos</h5>
-            <a href="libros/primeros_numeros_naturales_y_romanos.pdf" download class="btn-descargar">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-              Descargar ahora
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Libro 6 -->
-      <div class="col-6 col-md-4 col-lg-3 fade-in-up">
-        <div class="libro-card h-100">
-          <div class="libro-cover">
-            <img src="libros/portadas/portada_psico-casso.jpeg" alt="Aprendo mis Emociones">
-          </div>
-          <div class="libro-body">
-            <div class="libro-tag">Colorear</div>
-            <h5 class="libro-titulo">Psico-Casso</h5>
-            <a href="libros/psico-casso.pdf" download class="btn-descargar">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-              Descargar ahora
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Libro 7 
-      <div class="col-6 col-md-4 col-lg-3 fade-in-up">
-        <div class="libro-card h-100">
-          <div class="libro-cover">
-            <img src="static/libros/portada-espacio.jpg" alt="Viaje al Espacio">
-          </div>
-          <div class="libro-body">
-            <div class="libro-tag">Colorear</div>
-            <h5 class="libro-titulo">Viaje al Espacio</h5>
-            <a href="libro-espacio.pdf" download class="btn-descargar">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-              Descargar ahora
-            </a>
-          </div>
+          <p>Paga con Webpay Plus, compatible con todas las tarjetas chilenas de crédito y débito RedCompra.</p>
+          <a href="#" class="btn-tb">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            Donar con Transbank
+          </a>
         </div>
       </div>
 
       -->
-
-      <!-- Card "Próximamente" -->
-      <div class="col-6 col-md-4 col-lg-3 fade-in-up">
-        <div class="libro-card-proximamente h-100">
-          <div>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
-            <p>Próximamente<br/>Todos los meses subimos nuevos libros</p>
-          </div>
-        </div>
-      </div>
-
+ 
     </div>
   </div>
 </section>
-<br>
-<br>
+ 
+ 
+<!-- ══════════════════════════════
+     SOCIOS COLABORADORES
+══════════════════════════════ 
+<section class="socios-section">
+  <div class="container">
+ 
+    <div class="text-center mb-2 fade-in-up">
+      <div class="sec-label">Opción 3 · Mensual</div>
+      <div class="sec-line mx-auto"></div>
+      <h2 class="sec-title">Hazte Socio Colaborador</h2>
+      <p style="color:#666;max-width:580px;margin:.6rem auto 2.5rem;font-size:.97rem;line-height:1.7;">Suscríbete y aporta un monto fijo mensual. El cobro es automático y recibirás beneficios exclusivos como empresa o persona que impulsa el desarrollo del Biobío.</p>
+    </div>
+ 
+    <div class="socios-intro fade-in-up">
+      <h3>¿Cómo funciona la suscripción?</h3>
+      <p>Al hacer clic en "Suscribirme" serás redirigido a Mercado Pago para registrar tu tarjeta de forma segura. El cobro se realiza automáticamente cada mes. Puedes cancelar cuando quieras escribiéndonos al correo o WhatsApp de la fundación.</p>
+    </div>
+ 
+    <div class="row g-4">
+ 
+       BRONCE 
 
-
-<!-- ╔══════════════════════════════╗ -->
-<!-- ║       SECCIÓN 3: CONTACTO   ║ -->
-<!-- ╚══════════════════════════════╝ -->
-<section id="contacto">
-  <h2 class="fade-in-up">¿Quieres ser parte del Cambio?</h2>
-  <p class="fade-in-up">Súmate como voluntario, donante o aliado estratégico. 
-    <br>Juntos construimos un país con más oportunidades.</p>
-    <a href="donar.html">
-      <div class="btn-contacto fade-in-up">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-        DONAR o SERVIR
+      <div class="col-md-4 fade-in-up">
+        <div class="socio-card socio-bronce">
+          <div class="socio-header">
+            <span class="socio-medal">🥉</span>
+            <div class="socio-nombre">Impulsor de Bronce</div>
+          </div>
+          <div class="socio-body">
+            <div class="socio-price">
+              <div class="socio-price-num">$10.000</div>
+              <div class="socio-price-per">mensual · cobro automático</div>
+            </div>
+            <ul class="socio-beneficios">
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="#CD7F32"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Espacio publicitario en nuestra Revista Anual de Gestión</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="#CD7F32"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Certificado oficial de donación anual para fines tributarios</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="#CD7F32"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Reconocimiento oficial como colaborador en la revista y en nuestra página web</li>
+            </ul>
+            <a href="#" class="btn-suscribir">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
+              Suscribirme — $10.000/mes
+            </a>
+          </div>
+        </div>
       </div>
-    </a>
+ 
+      PLATA 
+
+      <div class="col-md-4 fade-in-up">
+        <div class="socio-card socio-plata">
+          <div class="socio-header">
+            <span class="socio-medal">🥈</span>
+            <div class="socio-nombre">Impulsor de Plata</div>
+          </div>
+          <div class="socio-body">
+            <div class="socio-price">
+              <div class="socio-price-num">$50.000</div>
+              <div class="socio-price-per">mensual · cobro automático</div>
+            </div>
+            <ul class="socio-beneficios">
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="#536878"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Todo lo incluido en el plan Bronce</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="#536878"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Beneficios adicionales próximamente disponibles</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="#536878"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Mayor visibilidad de marca ante la comunidad del Biobío</li>
+            </ul>
+            <a href="#" class="btn-suscribir">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
+              Suscribirme — $50.000/mes
+            </a>
+          </div>
+        </div>
+      </div>
+ 
+       ORO 
+      <div class="col-md-4 fade-in-up">
+        <div class="socio-card socio-oro">
+          <div class="socio-header">
+            <span class="socio-medal">🥇</span>
+            <div class="socio-nombre">Impulsor de Oro</div>
+          </div>
+          <div class="socio-body">
+            <div class="socio-price">
+              <div class="socio-price-num">$100.000</div>
+              <div class="socio-price-per">mensual · cobro automático</div>
+            </div>
+            <ul class="socio-beneficios">
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="#b8860b"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Todo lo incluido en el plan Plata</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="#b8860b"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Página completa de publicidad exclusiva en la Revista Anual</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="#b8860b"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Máxima visibilidad y reconocimiento institucional de la fundación</li>
+            </ul>
+            <a href="#" class="btn-suscribir">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
+              Suscribirme — $100.000/mes
+            </a>
+          </div>
+        </div>
+      </div>
+ 
+    </div>
+  </div>
 </section>
+-->
+ 
+<!-- ══════════════════════════════
+     BANNER CERTIFICADO
+══════════════════════════════ -->
+<div class="certificado-banner">
+  <div class="container">
+    <p>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:8px;opacity:.85;"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+      <strong>Recuerda</strong> que puedes solicitar tu <strong>certificado de donación</strong> escribiendo al correo
+      <a href="mailto:fundacionbiobioimpulsa@gmail.com" class="cert-link">fundacionbiobioimpulsa@gmail.com</a>
+      <br>
+      &nbsp;o directamente a nuestro WhatsApp
+      <a href="https://wa.me/56921951687" target="_blank" class="cert-link">+56 9 2195 1687</a>
+      &nbsp;adjuntando tu comprobante bancario.
+    </p>
+  </div>
+</div>
+
 
 <div class="whatsapp-float" id="whatsappBtn">
     <i class="fab fa-whatsapp"></i>
