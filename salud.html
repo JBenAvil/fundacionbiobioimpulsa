@@ -51,7 +51,13 @@
       padding: 0; 
     }
 
-    body { font-family: 'Open Sans', sans-serif; color: #1a1a2e; }
+    body { 
+    font-family: 'Open Sans', sans-serif; 
+    color: #1a1a2e;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
 
     /* NAV */
     .navbar { 
@@ -728,53 +734,6 @@
         font-size: 0.9rem !important; /* Letra levemente más pequeña */
       }
     }
-
-    /* ─── ANIMACIONES ─── */
-    .fade-in-up {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.65s ease, transform 0.65s ease;
-    }
-    .fade-in-up.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* CTA */
-    .cta-band { 
-      background: linear-gradient(135deg, var(--azul) 0%, #0d47a1 100%); 
-      color: #fff; 
-      padding: 4rem 2rem; 
-      text-align: center; 
-    }
-
-    .cta-band h2 { 
-      font-family: 'Montserrat', sans-serif; 
-      font-weight: 900; 
-      font-size: clamp(1.6rem,3.5vw,2.4rem); 
-      margin-bottom: 0.8rem; 
-    }
-
-    .cta-band p { opacity: 0.88; max-width: 500px; margin: 0 auto 1.8rem; line-height: 1.7; }
-
-    .btn-cta-white { 
-      display: inline-flex; 
-      align-items: center; 
-      gap: 8px; 
-      background: #fff; 
-      color: var(--azul); 
-      font-family: 'Montserrat', sans-serif; 
-      font-weight: 700; 
-      padding: 13px 30px; 
-      border-radius: 50px; 
-      text-decoration: none; 
-      transition: transform 0.2s, background 0.2s, color 0.2s;
-     }
-
-    .btn-cta-white:hover { background: var(--rojo); color: #fff; transform: translateY(-3px) scale(1.05); }
-
-
-
   </style>
 </head>
 <body>
@@ -1009,7 +968,6 @@
       </div>
     </a>
 </section>
-
 <div class="whatsapp-float" id="whatsappBtn">
     <i class="fab fa-whatsapp"></i>
 </div>
