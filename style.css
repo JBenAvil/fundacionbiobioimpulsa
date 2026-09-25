@@ -597,6 +597,7 @@
 
     /* Forzamos que los items se listen verticalmente en móvil */
     .menu-movil-lateral .navbar-nav {
+      position: fixed;
       flex-direction: column;
       gap: 15px !important;
     }
