@@ -1,10 +1,33 @@
 [
   {
+    "id": "impulso_emprendedor",
+    "titulo": "Hoy damos el vamos a nuestro programa Impulso Emprendedor.",
+    "resumen": "Con el propósito de fortalecer a emprendedores locales de la Región del Bio-Bío, el programa iniciará su ejecución y desarrollo durante el verano 2026 - 2027.",
+    "imagenPortada": "noticias/impulso_emprendedor/impulso_emprendedor.jpg",
+    "fecha": "2026-10-07",
+    "categoria": "Emprendimiento",
+    "contenido": [
+      {
+        "tipo": "imagen-izq",
+        "imagen": "noticias/impulso_emprendedor/impulso_emprendedor.jpg",
+        
+        "texto": "Con una inversión inicial de 30 millones de pesos, nuestra Fundación Bio-Bío Impulsa buscará emprendedores para fortalecer sus negocios.\n\nHoy dimos el vamos con las primeras 12 Beneficiarias correspondiente a un Comité de Recolectoras de la Zona.\n\nEl objetivo es potenciar sus productos permitiendoles acceder a:\n1. Asesoría y orientación.\n2. Asiganación de becas y cursos de capacitación.\n3. Impulso digital para sus negocios.\n\nLas postulaciones ya estan abiertas en nuestra página web."
+      },
+      {
+        "tipo": "imagen-der",
+        "imagen": "noticias/constitucion/director_juan_benavides.jpg",
+        "texto": "Buscamos fortalece unidades de negocios que crean fuentes de ingresos reales, que tengan potencial de crecimiento y permitan a las familias salir de la pobreza.\n\n Indicó nuestro Director Juan Benavides Ávila."
+      }
+    ],
+    "galeria": [
+    ]
+  },
+  {
     "id": "ciletada",
     "titulo": "Fundación Bio-Bío Impulsa colabora para impulsar la 4° Versión de la Cicletada Familiar en Cañete",
     "resumen": "Fundación Bio-Bío Impulsa colabora impulsando unas de las tradiciones parroquiales junto a diferentes actores sociales e instituciones de la comuna de Cañete.",
     "imagenPortada": "noticias/cicletada/cicletada_familiar1.jpg",
-    "fecha": "2026-10-09",
+    "fecha": "2026-09-09",
     "categoria": "Salud",
     "contenido": [
       {
