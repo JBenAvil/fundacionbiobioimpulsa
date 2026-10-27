@@ -121,6 +121,14 @@ const CURSOS = {
     imagen: 'static/cursos/registro_marca.png',
     descripcion: 'Aprende como registrar tu propiedad intelectual como marca personal artística en el DDI y tu marca empresarial en el INAPI, procedimientos administrativos, costos, alcances y todo lo que necesitas saber antes de comercializar tus productos o servicios.',
     malla: 'cursos/Programa_estudio_registro_marca.pdf'
+  },
+  'gestion-turismo': {
+    nombre: 'Gestión de Turismo',
+    duracion: '10 hrs',
+    precio: 'CLP $99.990 - USD $120,00',
+    imagen: 'static/cursos/gestion_turismo.png',
+    descripcion: 'Hazle frente a la operación turística y a la atención de visitantes, desde la planificación de servicios y el marco normativo de SERNATUR hasta el guiado, la gestión de riesgos y la administración logística de la actividad.',
+    malla: 'cursos/Programa_estudio_gestion_turismo.pdf'
   }
 };
 

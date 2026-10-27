@@ -1,5 +1,67 @@
 [
   {
+    "id": "cicletada-familiar",
+    "titulo": "La 4° Versión de la Cicleta Familiar fue todo éxito este 18 de octubre 2026.",
+    "resumen": "Con una gran afluencia de publico se llevó a cabo durante el mes de la familia la 4° Cicletada Familiar este 18 de cotubre 2026",
+    "imagenPortada": "noticias/cicletada/cicletada_1.webp",
+    "fecha": "2026-10-18",
+    "categoria": "Salud",
+    "contenido": [
+      {
+        "tipo": "imagen-izq",
+        "imagen": "noticias/cicletada/cicletada_1.webp",
+        
+        "texto": "Finalmente, este domingo 18 de octubre se llevo a cabo la 4° Versión de la Cicletada Familiar en la comuna de Cañete.\n\nComo Fundación Bio-Bío Impulsa nos hicimos parte, colaborando junto a varias instituciones en la coordinación de esta hermosa tradición organizada por la Parroquia Nuestra Señora del Carmen y Nahuelbike.\n\nUna actividad destinada a impulsar el deporte y la vida en familiar."
+      },
+      {
+        "tipo": "imagen-der",
+        "imagen": "noticias/constitucion/director_juan_benavides.jpg",
+        "texto": "Reconozco el éxito de la jornada y declaro la necesidad de seguir impulsando actividades en la región que permitan fortalecer el tejido social.\n\n Indicó nuestro Director Juan Benavides Ávila."
+      }
+    ],
+    "galeria": [
+      "noticias/cicletada/cicletada_1.webp",
+      "noticias/cicletada/cicletada_2.webp",
+      "noticias/cicletada/cicletada_3.webp",
+      "noticias/cicletada/cicletada_4.webp",
+      "noticias/cicletada/cicletada_5.webp",
+      "noticias/cicletada/cicletada_6.webp",
+      "noticias/cicletada/cicletada_7.webp",
+      "noticias/cicletada/cicletada_8.webp",
+      "noticias/cicletada/cicletada_9.webp",
+      "noticias/cicletada/cicletada_10.webp"
+      
+    ]
+  },
+  {
+    "id": "becas-biobio-impulsa",
+    "titulo": "1000 Becas Bio-Bío Impulsa fueron donadas por nuestra Fundación a la I. Municipal de Cañete.",
+    "resumen": "Hoy 15 de octubre 2026 nuestro Director de la Fundación Bio-Bío Impulsa Juan Benavides Ávila, ha gestionado la entrega de 1.000 becas Bio-Bío Impulsa a la I. Municipalidad de Cañete",
+    "imagenPortada": "noticias/becas/becas_biobio_impulsa_1.jpg",
+    "fecha": "2026-10-15",
+    "categoria": "Educación",
+    "contenido": [
+      {
+        "tipo": "imagen-izq",
+        "imagen": "noticias/becas/becas_biobio_impulsa_1.jpg",
+        
+        "texto": "Hoy 15 de octubre 2026 nuestro Director de la Fundación Bio-Bío Impulsa Juan Benavides Ávila, ha gestionado la entrega de 1.000 becas Bio-Bío Impulsa a la I. Municipalidad de Cañete.\n\nBecas destinadas a fortalecer los conocimientos y habilidades de los vecinos y vecinas, ampliando sus herramientas para el desarrollo laboral, el emprendimiento y fortalecimiento de la empleabilidad en la comuna."
+      },
+      {
+        "tipo": "imagen-der",
+        "imagen": "noticias/constitucion/director_juan_benavides.jpg",
+        "texto": "Durante los próximos meses coordinaremos la entrega de éstos beneficios y definiremos con los actores claves la lista de cursos que estarán disponibles para la comunidad.\n\n Indicó nuestro Director Juan Benavides Ávila."
+      }
+    ],
+    "galeria": [
+      "noticias/becas/becas_biobio_impulsa_1.jpg",
+      "noticias/becas/becas_biobio_impulsa_2.jpg",
+      "noticias/becas/becas_biobio_impulsa_3.jpg",
+      "noticias/becas/becas_biobio_impulsa_4.jpg"
+      
+    ]
+  },
+  {
     "id": "impulso_emprendedor",
     "titulo": "Hoy damos el vamos a nuestro programa Impulso Emprendedor.",
     "resumen": "Con el propósito de fortalecer a emprendedores locales de la Región del Bio-Bío, el programa iniciará su ejecución y desarrollo durante el verano 2026 - 2027.",

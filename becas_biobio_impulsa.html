@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta name="google-site-verification" content="KuddtsvOHKY2XH_wyzGKEvyNOOTwqOxlaRUiJKWEFEY" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ND0Z3VTGZV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-ND0Z3VTGZV');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fundación Bio-Bío Impulsa</title>
+  <meta property="og:image" content="https://www.fundacionbiobioimpulsa.cl/static/fundacion_logo.jpeg">
+    <meta property="og:image:width" content="300px">
+    <meta property="og:image:height" content="300px">
+    <meta property="keywords" content="Fundación, cursos gratis, cursos para emprendedores, operativos de salud">
+    <meta name="description" content="Fundación Bio-Bío Impulsa tiene como misión promover el desarrollo humano integral, articulando recursos privados y públicos para ejecutar proyectos de alto impacto en Educación, Salud y Cultura. Buscamos mejorar la calidad de vida de las comunidades y la sostenibilidad de las organizaciones sociales.">
+
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content="JBenAvil">
+    <meta itemprop="Fundación Bio-Bío Impulsa tiene como misión promover el desarrollo humano integral, articulando recursos privados y públicos para ejecutar proyectos de alto impacto en Educación, Salud y Cultura. Buscamos mejorar la calidad de vida de las comunidades y la sostenibilidad de las organizaciones sociales." content="Fundación Bio-Bío Impulsa tiene como misión promover el desarrollo humano integral, articulando recursos privados y públicos para ejecutar proyectos de alto impacto en Educación, Salud y Cultura. Buscamos mejorar la calidad de vida de las comunidades y la sostenibilidad de las organizaciones sociales.">
+
+    <!-- Links -->
+    <link rel="icon" type="image/png" sizes="192x192" href="static/fundacion_logo.jpeg" />
+    <link rel="icon" type="image/png" sizes="512x512" href="static/fundacion_logo.jpeg" />
+
+    
+    <link rel="icon" type="image/png" href="static/fundacion_logo.jpeg" />
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="static/fundacion_logo.jpeg" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"/>
+  
+  <style>
+    /* ─── BIBLIOTECA ─── */
+    .biblioteca-section {
+      padding: 5rem 0;
+      background: var(--gris-claro);
+    }
+
+    .libro-card {
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(21,101,192,0.10);
+      transition: transform 0.28s cubic-bezier(.34,1.56,.64,1), box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .libro-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 40px rgba(21,101,192,0.18);
+    }
+
+    .libro-cover {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      overflow: hidden;
+      background: #e8edf4;
+      display: block;
+    }
+    .libro-cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .libro-body {
+      padding: 1.3rem 1.4rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .libro-tag {
+      display: inline-block;
+      background: rgba(21,101,192,0.1);
+      color: var(--azul);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.68rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 0.6rem;
+      width: fit-content;
+    }
+
+    .libro-titulo {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 1.02rem;
+      color: var(--azul);
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+
+    .btn-descargar {
+      margin-top: auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--azul);
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 11px 16px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: transform 0.2s, background 0.2s;
+    }
+    .btn-descargar:hover {
+      background: var(--rojo);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    /* Card "Próximamente" */
+    .libro-card-proximamente {
+      background: linear-gradient(135deg, var(--azul) 0%, #0d47a1 100%);
+      border-radius: 20px;
+      aspect-ratio: unset;
+      min-height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem 1.4rem;
+      color: #fff;
+    }
+    .libro-card-proximamente svg {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 1rem;
+      opacity: 0.85;
+    }
+    .libro-card-proximamente p {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.98rem;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 767px) {
+      .libro-titulo { font-size: 0.95rem; }
+    }
+
+    /* ═══════════════════════════════════════
+   IMPULSO EMPRENDEDOR
+   ═══════════════════════════════════════ */
+
+.impulso-section {
+  padding: 5rem 0;
+  background: var(--gris-claro);
+}
+
+.impulso-wrapper {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.impulso-card {
+  background: #fff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 8px 35px rgba(21, 101, 192, 0.12);
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.impulso-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 45px rgba(21, 101, 192, 0.17);
+}
+
+/* Imagen */
+
+.impulso-imagen {
+  min-height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+.impulso-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Capa azul sobre la imagen */
+
+.impulso-imagen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* Contenido */
+
+.impulso-contenido {
+  padding: 3rem 3rem 3.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.impulso-etiqueta {
+  display: inline-block;
+  width: fit-content;
+  background: rgba(21, 101, 192, 0.1);
+  color: var(--azul);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 7px 13px;
+  border-radius: 30px;
+  margin-bottom: 1rem;
+}
+
+.impulso-titulo {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--azul);
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1.15;
+  margin-bottom: 1.2rem;
+}
+
+.impulso-descripcion {
+  color: #444;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+}
+
+.impulso-cita {
+  border-left: 4px solid var(--rojo);
+  padding: 0.8rem 1rem;
+  margin: 0.5rem 0 1.5rem;
+  background: rgba(21, 101, 192, 0.04);
+  color: #555;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.impulso-cita strong {
+  display: block;
+  color: var(--azul);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.82rem;
+  margin-top: 0.5rem;
+}
+
+/* Beneficios */
+
+.impulso-beneficios-titulo {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--azul);
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+}
+
+.impulso-beneficios {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.8rem;
+}
+
+.impulso-beneficios li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #444;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  margin-bottom: 0.65rem;
+}
+
+.impulso-beneficios li i {
+  color: var(--azul);
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+/* Botón */
+
+.btn-impulso {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  width: fit-content;
+  background: var(--azul);
+  color: #fff;
+  padding: 13px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  transition: all 0.25s ease;
+}
+
+.btn-impulso:hover {
+  background: var(--rojo);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(21, 101, 192, 0.2);
+}
+
+/* Responsive */
+
+@media (max-width: 991px) {
+  .impulso-card {
+    grid-template-columns: 1fr;
+  }
+
+  .impulso-imagen {
+    min-height: 360px;
+  }
+
+  .impulso-contenido {
+    padding: 2.5rem 2rem 2.8rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .impulso-section {
+    padding: 3rem 0;
+  }
+
+  .impulso-imagen {
+    min-height: 280px;
+  }
+
+  .impulso-contenido {
+    padding: 2rem 1.4rem 2.3rem;
+  }
+
+  .impulso-titulo {
+    font-size: 1.55rem;
+  }
+
+  .impulso-descripcion {
+    font-size: 0.92rem;
+  }
+
+  .btn-impulso {
+    width: 100%;
+  }
+}
+
+  </style>
+</head>
+<body>
+<script src="app.js"></script>
+
+<!-- ╔══════════════════════════════╗ -->
+<!-- ║           NAVBAR             ║ -->
+<!-- ╚══════════════════════════════╝ -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid px-4">
+    <!-- Brand con logo -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="static/fundacion_logo.jpeg" height="80px" width="auto" class="nav-logo-img">
+      <span>Fundación<br/>Bio-Bío Impulsa</span>
+    </a>
+
+    <!-- Botón Hamburguesa -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menú Desplegable (Ahora Lateral en Móvil) -->
+    <div class="collapse navbar-collapse justify-content-end menu-movil-lateral" id="navMenu">
+      
+      <!-- Botón X para cerrar en móvil -->
+      <button class="btn-close-menu d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        &times;
+      </button>
+
+      <ul class="navbar-nav gap-1">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            Inicio
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="noticias.html">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm-1 16H5V5h14v14zM7 8h10v2H7V8zm0 4h10v2H7v-2zm0 4h6v2H7v-2z"/></svg>
+            Noticias
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="educacion.html">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+            Educación
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="salud.html">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
+            Salud
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="cultura.html">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm0 16c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7zm-1.5-9.5l5 3-5 3v-6z"/></svg>
+            Cultura
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="biblioteca.html">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21 4H3c-1.1 0-2 .9-2 2v13c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM3 19V6h8v13H3zm18 0h-8V6h8v13zm-7-9.5h6V11h-6zm0 2.5h6v1.5h-6zm0 2.5h6V16h-6z" />
+            </svg>
+            Biblioteca
+          </a>
+        </li>
+        <!----
+        <li class="nav-item">
+          <a class="nav-link" href="impulso_emprendedor.html">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 21h18v-2H3v2zm2-4h2v-8H5v8zm4 0h2V5H9v12zm4 0h2v-6h-2v6zm4 0h2V3h-2v14z"/>
+            </svg>
+            Impulso Emprendedor
+          </a>
+        </li>
+        -->
+        <li class="nav-item">
+          <a class="nav-link" href="becas_biobio_impulsa.html">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 2H4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h4v5l4-2 4 2v-5h4c1.11 0 2-.89 2-2V4c0-1.11-.89-2-2-2zm0 14H4V4h16v12zM6 6h12v2H6V6zm0 3h12v2H6V9zm0 3h7v2H6v-2z"/>
+            </svg>
+            Becas Bio-Bío Impulsa
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="donar.html">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            <b>DONAR</b>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ╔══════════════════════════════╗ -->
+<!-- ║          SECCIÓN 1: INICIO   ║ -->
+<!-- ╚══════════════════════════════╝ -->
+<section id="inicio">
+  <div class="container-xl">
+    <br>
+    <br>
+    <div class="row align-items-center">
+      <!-- Texto (izquierda) -->
+      <div class="col-lg-7 hero-content">
+        <div class="hero-badge">Postula a Nuestras:</div>
+        <h1 class="hero-title">
+          <span>Becas Bio-Bío Impulsa</span><br/>
+        </h1>
+        <p class="hero-desc">
+          Destinadas a fortalecer el emprendieminto y la empleabilidad en la comuna.
+        </p>
+        
+      </div>
+
+      <!-- Card Logo (derecha) -->
+      <div class="col-lg-5 hero-img-col ">
+          <img src="static/director_fundacion_juan_benavides_avila.png" height="100%" width="100%">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ╔══════════════════════════════════════╗ -->
+<!-- ║       SECCIÓN 2: IMPULSO EMPRENDEDOR ║ -->
+<!-- ╚══════════════════════════════════════╝ -->
+
+<section id="impulso-emprendedor" class="impulso-section">
+
+  <div class="container">
+
+    <div class="impulso-wrapper">
+
+      <div class="impulso-card">
+
+        <!-- IMAGEN -->
+        <div class="impulso-imagen">
+
+          <!-- Cambia esta imagen por la imagen definitiva del programa -->
+          <img
+            src="noticias/becas/becas_biobio_impulsa.png"
+            alt="Programa Impulso Emprendedor"
+          >
+
+        </div>
+
+
+        <!-- CONTENIDO -->
+        <div class="impulso-contenido">
+
+          <span class="impulso-etiqueta">
+            Programa de fortalecimiento de habilidades
+          </span>
+
+          <h2 class="impulso-titulo">
+            Becas Bio-Bío Impulsa
+          </h2>
+
+          <p class="impulso-descripcion">
+            Hoy realizamos la apertura a la postulación de nuestras
+            <strong>Becas Bio-Bío Impulsa.</strong>
+          </p>
+
+          <div class="impulso-cita">
+
+            "Son 1.000 Becas Bio-Bío Impulsa destinadas a fortalecer los conocimientos y habilidades de los vecinos y vecinas, 
+            ampliando sus herramientas para el desarrollo laboral, el emprendimiento y fortalecimiento de la empleabilidad en la comuna".
+
+            <strong>
+              — Juan Benavides Ávila, Director
+            </strong>
+
+          </div>
+
+
+          <!-- BENEFICIOS -->
+
+          <div class="impulso-beneficios-titulo">
+            ¿Quiénes pueden postular?
+          </div>
+
+          <ul class="impulso-beneficios">
+
+            <li>
+              <i class="fas fa-check-circle"></i>
+              <span>Personas Mayores de 18 años</span>
+            </li>
+
+            <li>
+              <i class="fas fa-check-circle"></i>
+              <span>Organizaciones Sociales</span>
+            </li>
+
+            <li>
+              <i class="fas fa-check-circle"></i>
+              <span>Con Residencia en Cañete</span>
+            </li>
+
+          </ul>
+          <!-- BOTÓN -->
+
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSc9PU7UfO6K4IbIqISdufzJ_Lj2tQj-gUsrra-KthXnn0SU3A/viewform?usp=header"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-impulso"
+          >
+            <i class="fas fa-rocket"></i>
+            POSTULA AQUÍ
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- ╔══════════════════════════════╗ -->
+<!-- ║       SECCIÓN 3: CONTACTO   ║ -->
+<!-- ╚══════════════════════════════╝ -->
+<section id="contacto">
+  <h2 class="fade-in-up">¿Quieres Conocer Nuestros Cursos?</h2>
+  <p class="fade-in-up">Puedes revisar nuestro catálogo completo.
+    <br>Las Becas Bio-Bío Impulsa cubren el costo total de los cursos</p>
+    <a href="educacion.html">
+      <div class="btn-contacto fade-in-up">
+        Ver todos los Cursos
+      </div>
+    </a>
+</section>
+<br>
+<br>
+
+
+<!-- ╔══════════════════════════════╗ -->
+<!-- ║       SECCIÓN 3: CONTACTO   ║ -->
+<!-- ╚══════════════════════════════╝ -->
+<section id="contacto">
+  <h2 class="fade-in-up">¿Quieres ser parte del Cambio?</h2>
+  <p class="fade-in-up">Súmate como voluntario, donante o aliado estratégico. 
+    <br>Juntos construimos un país con más oportunidades.</p>
+    <a href="donar.html">
+      <div class="btn-contacto fade-in-up">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        DONAR o SERVIR
+      </div>
+    </a>
+</section>
+
+<div class="whatsapp-float" id="whatsappBtn">
+    <i class="fab fa-whatsapp"></i>
+</div>
+
+
+<!-- ╔══════════════════════════════╗ -->
+<!-- ║           FOOTER             ║ -->
+<!-- ╚══════════════════════════════╝ -->
+<footer>
+  <div class="container">
+    <div class="row gy-3">
+      <div class="col-md-4">
+        <div class="footer-brand">Bio-Bío Impulsa</div>
+        <p class="footer-desc">
+          Fundación comprometida con el desarrollo integral de las personas y comunidades 
+          de Chile.
+        </p>
+        <div class="footer-social mt-3">
+          <a href="https://www.facebook.com/share/18aPjv8rna/" title="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/fundacion_biobio_impulsa" title="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="#1565C0"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="#1565C0" stroke-width="2"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-md-3 offset-md-1">
+        <div class="footer-links-title">Navegación</div>
+        <div class="footer-links">
+          <a href="index.html">Inicio</a>
+          <a href="noticias.html">Noticias</a>
+          <a href="educacion.html">Educación</a>
+          <a href="salud.html">Salud</a>
+          <a href="cultura.html">Cultura</a>
+          <a href="biblioteca.html">Biblioteca</a>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="footer-links-title">Contacto</div>
+        <div class="footer-links">
+          <a href="mailto:fundacionbiobioimpulsa@gmail.com">fundacionbiobioimpulsa@gmail.com</a>
+          <a href="tel:+56412345678">+56 9 21951687</a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="footer-divider"/>
+    <div class="footer-copy">
+      © 2026 Fundación Bio-Bío Impulsa · Todos los derechos reservados
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
